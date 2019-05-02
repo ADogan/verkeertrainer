@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { QuizComponent } from './quiz/quiz.component';
+
 import { SidebarComponent } from './main_layout/sidebar/sidebar.component';
 import { TopbarComponent } from './main_layout/topbar/topbar.component';
 import { FooterComponent } from './main_layout/footer/footer.component';
@@ -24,6 +26,7 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     TopbarComponent,
     FooterComponent,
     LogoutModalComponent,
+    QuizComponent,
     MessagesDropdownComponent
   ],
   imports: [
