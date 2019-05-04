@@ -1,15 +1,24 @@
+// Framework modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
+// Services
+import { TrafficSignsService } from './services/traffic-signs.service';
+
+// Pages
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
+
+//  Modules
 import { QuizBoxComponent } from './quiz/quizbox/quizbox.component';
 
+// Main layout modules
 import { SidebarComponent } from './main_layout/sidebar/sidebar.component';
 import { TopbarComponent } from './main_layout/topbar/topbar.component';
 import { FooterComponent } from './main_layout/footer/footer.component';
@@ -23,6 +32,7 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    TrafficSignsComponent,
     SidebarComponent,
     TopbarComponent,
     FooterComponent,
@@ -35,7 +45,7 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TrafficSignsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
