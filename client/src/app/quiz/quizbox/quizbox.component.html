@@ -13,32 +13,32 @@
 
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="card bg-primary text-white shadow quizchoice">
-                        <div class="card-body">
-                            The possible answer could be a very long one.
+                    <div class="card bg-primary text-white shadow quizchoice" ngClick="alert('hi')">
+                        <div class="card-body" (click)="clickedAnswer()">
+                                Voorwegwijzer binnen de bebouwde kom met interlokaal doel, lokaal doel, een dagrecreatiecentrum, objecten en stadsroutenummers
                             <div class="text-white-50 small">#4e73df</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
-                            The possible answer could be a very long one.
+                    <div class="card-body" (click)="clickedAnswer()" newname="you">
+                            Voorwegwijzer binnen de bebouwde kom met interlokaal doel, lokaal doel, een dagrecreatiecentrum, objecten en stadsroutenummers{{1 + 2}} {{hi}} {{newname}}
                         <div class="text-white-50 small">#1cc88a</div>
                     </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
-                            The possible answer could be a very long one.
+                    <div class="card-body" (click)="clickedAnswer()">
+                            Voorwegwijzer binnen de bebouwde kom
                         <div class="text-white-50 small">#36b9cc</div>
                     </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
-                    <div class="card-body">
+                    <div class="card-body" (click)="clickedAnswer()">
                             The possible answer could be a very long one.
                         <div class="text-white-50 small">#f6c23e</div>
                     </div>
@@ -47,11 +47,25 @@
             </div>
 
                                   
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">A.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long</a>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">B.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long</a>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">C.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long</a>      
+            <a routerLink="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                A.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long
+            </a>
 
-            
+            <a routerLink="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                B.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long
+            </a>
+
+            <a routerLink="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                C.<i class="fas fa-download fa-sm text-white-50"></i> Possible answer could be very long
+            </a>      
+
+            <a routerLink="#" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-flag"></i>
+                </span>
+                <span class="text">Split Button Primary&lt;br /&gt; dsafsagfagfdagfdag fds hgfds gfda gsda fgdsghfda gfa gfdsgfds gfdsg hgf</span>
+            </a>
+
         </div>
     </div>
 </div>
