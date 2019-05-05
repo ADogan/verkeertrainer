@@ -12,6 +12,7 @@ import { TrafficSignsService } from './services/traffic-signs.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
 
@@ -32,6 +33,7 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    AboutComponent,
     TrafficSignsComponent,
     SidebarComponent,
     TopbarComponent,
