@@ -7,13 +7,13 @@ import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'quiz', component: QuizComponent },
     { path: 'trafficSigns', component: TrafficSignsComponent },
 
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: 'trafficSigns' }
 ];
 
 

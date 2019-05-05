@@ -1,9 +1,14 @@
 .traffic-sign {
     margin:10px;
     padding:10px;
+    /* color:white; */
 }
 
-.traffic-card:hover { 
-    background-color:lightgreen;
+.traffic-sign:hover { 
     cursor:pointer;
+    color:black;
+}
+
+.traffic-sign:active {
+    color:black;
 }
