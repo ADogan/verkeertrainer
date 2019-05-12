@@ -16,7 +16,14 @@ export class TrafficSignsService {
     getTrafficSignsSourceUrl() {
         return this.trafficSignsSourceUrl;
     }
+
+    getRandomTrafficSign() {
+        const random_number = Math.floor(Math.random() * (TRAFFIC_SIGNS.length));
+        console.log(random_number);
+        return TRAFFIC_SIGNS[random_number];
+    }
 }
+
 const TRAFFIC_SIGNS: ITrafficSign[] = [
     {
     code: 'A1',
@@ -1367,7 +1374,7 @@ const TRAFFIC_SIGNS: ITrafficSign[] = [
         image: {
         filename: '239092'
     },
-    description: 'verkeerstunnel',
+    description: 'Verkeerstunnel',
     category: 'Informatie'
     },
     {

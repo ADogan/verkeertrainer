@@ -1,9 +1,0 @@
-.quizchoice:hover{
-    background-color:#36b9cc !important;
-    cursor: pointer;
-}
-
-.quizchoice:active{
-    background-color:#f6c23e !important;
-    cursor: pointer;
-}

@@ -1,7 +1,7 @@
 
 export interface IQuizOption {
-    id: number;
+    id?: number;
     code: string;
-    title: string;
     description: string;
 }
+

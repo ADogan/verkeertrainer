@@ -16,9 +16,6 @@ import { AboutComponent } from './about/about.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
 
-//  Modules
-import { QuizBoxComponent } from './quiz/quizbox/quizbox.component';
-
 // Main layout modules
 import { SidebarComponent } from './main_layout/sidebar/sidebar.component';
 import { TopbarComponent } from './main_layout/topbar/topbar.component';
@@ -40,7 +37,6 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     FooterComponent,
     LogoutModalComponent,
     QuizComponent,
-    QuizBoxComponent,
     MessagesDropdownComponent
   ],
   imports: [

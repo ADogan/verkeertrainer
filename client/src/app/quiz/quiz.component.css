@@ -1,0 +1,51 @@
+.quizOptionCard:hover{
+    /* background-color:#36b9cc !important; */
+    cursor: pointer;
+}
+
+.quizOptionCard:active{
+    background-color:#f6c23e !important;
+    cursor: pointer;
+}
+
+.quizBox {
+    left:auto;
+    right:auto;
+    margin:0 auto;
+}
+
+.quizzedTrafficSign {
+}
+.quizOptionIcon {
+    color: #ddd;
+}
+
+.card > .icon {
+    float:left;
+    padding:5px;
+    width:20px;
+}
+
+.card {
+    float: left;
+    min-height:50px;
+    display: inline;
+}
+
+.quizBoxBody {
+    background-color:#f8f9fc;
+}
+
+.quizOptionBox .card-body {
+    color: #333 !important;
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 3px;
+    /* margin: 1px; */
+}
+
+.quizOptionBox .card-body:hover {
+    color: black !important;
+    /* background-color:#eeeeee; */
+    /* border: 1px solid black; */
+}
