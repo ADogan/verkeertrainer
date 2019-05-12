@@ -32,13 +32,16 @@ export class QuizComponent implements OnInit {
   feedbackTime(quizOption) {
     this.showFeedback(quizOption);
     // console.log('let\'s wait, shall we?');
-    setTimeout(() => {  this.newQuestion(); }, 4000);
+    // setTimeout(() => {  this.newQuestion(); }, 10000);
+  }
+  nextQuestion() {
+    this.newQuestion();
   }
 
   showFeedback(quizOption) {
     this.showContinueButton = true;
     this.quizOptions.every(element => {
-      if (element.code === this.correctSign.code ){
+      if (element.code === this.correctSign.code ) {
         element.status = 'correct';
       } else if (element.code === quizOption.code ) {
         element.status = 'chosenIncorrect';
@@ -46,8 +49,7 @@ export class QuizComponent implements OnInit {
         element.status = 'incorrect';
       }
       return true;
-    }
-    )
+    });
   }
 
   ngOnInit() {
