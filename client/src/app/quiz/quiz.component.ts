@@ -17,11 +17,9 @@ export class QuizComponent implements OnInit {
    correctSign;
    showContinueButton = false;
 
-  clickedAnswer() {
-    const clickedSignCode = 'A1';
-    const correct = this.checkAnswer(clickedSignCode);
-    console.log('your answer is: '  + correct);
-    this.feedbackTime();
+  clickedAnswer(quizOption) {
+    const correct = this.checkAnswer(quizOption.code);
+    this.feedbackTime(quizOption);
   }
   checkAnswer(clickedSignCode: string): boolean {
     // throw new Error("Method not implemented.");
@@ -31,14 +29,25 @@ export class QuizComponent implements OnInit {
       return false;
     }
   }
-  feedbackTime() {
-    this.showFeedback();
-    console.log('let\'s wait, shall we?');
+  feedbackTime(quizOption) {
+    this.showFeedback(quizOption);
+    // console.log('let\'s wait, shall we?');
     setTimeout(() => {  this.newQuestion(); }, 4000);
   }
 
-  showFeedback() {
+  showFeedback(quizOption) {
     this.showContinueButton = true;
+    this.quizOptions.every(element => {
+      if (element.code === this.correctSign.code ){
+        element.status = 'correct';
+      } else if (element.code === quizOption.code ) {
+        element.status = 'chosenIncorrect';
+      } else {
+        element.status = 'incorrect';
+      }
+      return true;
+    }
+    )
   }
 
   ngOnInit() {
@@ -49,10 +58,10 @@ export class QuizComponent implements OnInit {
     this.showContinueButton = false;
 
    this.resetQuizOptionsAvailablePositions();
-    this.quizOptions = [ { code: 'A1', description: 'A1.'
-      }, { code: 'A2', description: 'A2.'
-      }, { code: 'A3', description: 'A3.'
-      }, { code: 'A4', description: 'A4.' }];
+    this.quizOptions = [ { code: 'A1', description: 'A1.', status: 'unset'
+      }, { code: 'A2', description: 'A2.', status: 'unset'
+      }, { code: 'A3', description: 'A3.', status: 'unset'
+      }, { code: 'A4', description: 'A4.', status: 'unset' }];
 
     this.setCorrectSignInQuizOptions();
     this.setIncorrectOptionInQuizOptions();
@@ -96,13 +105,15 @@ export class QuizComponent implements OnInit {
   }
 
   getUniqueRandomNumberBelow4() {
+    // make check if size of quizOptionsAvailablePositions is 1
+    // if yes, then pop that as the next index instead of looking for a new unique random number
     let randomNumberAvailable = false;
     let randomNumber: number;
     this.isRandomNumberAvailableInQuizOptions(randomNumber);
     let i = 0;
 
     while (!randomNumberAvailable) {
-      console.log('attempt' + ++i);
+      console.log('attempt to find a random available number ' + ++i);
       randomNumber = this.getRandomNumberBelow4();
       randomNumberAvailable = this.isRandomNumberAvailableInQuizOptions(randomNumber);
     }

@@ -610,7 +610,7 @@ var TopbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".quizOptionCard:hover{\n    /* background-color:#36b9cc !important; */\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    background-color:#f6c23e !important;\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizzedTrafficSign {\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionBox .card-body {\n    color: #333 !important;\n    background-color: #fff;\n    border: 1px solid white;\n    border-radius: 3px;\n    /* margin: 1px; */\n}\n\n.quizOptionBox .card-body:hover {\n    color: black !important;\n    /* background-color:#eeeeee; */\n    /* border: 1px solid black; */\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQ0FBMEM7SUFDMUMsZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0ksb0NBQW9DO0lBQ3BDLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLFVBQVU7SUFDVixXQUFXO0lBQ1gsY0FBYztDQUNqQjs7QUFFRDtDQUNDOztBQUNEO0lBQ0ksWUFBWTtDQUNmOztBQUVEO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixXQUFXO0NBQ2Q7O0FBRUQ7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLHlCQUF5QjtDQUM1Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2Qix1QkFBdUI7SUFDdkIsd0JBQXdCO0lBQ3hCLG1CQUFtQjtJQUNuQixrQkFBa0I7Q0FDckI7O0FBRUQ7SUFDSSx3QkFBd0I7SUFDeEIsK0JBQStCO0lBQy9CLDhCQUE4QjtDQUNqQyIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnF1aXpPcHRpb25DYXJkOmhvdmVye1xuICAgIC8qIGJhY2tncm91bmQtY29sb3I6IzM2YjljYyAhaW1wb3J0YW50OyAqL1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnF1aXpPcHRpb25DYXJkOmFjdGl2ZXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNmNmMyM2UgIWltcG9ydGFudDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5xdWl6Qm94IHtcbiAgICBsZWZ0OmF1dG87XG4gICAgcmlnaHQ6YXV0bztcbiAgICBtYXJnaW46MCBhdXRvO1xufVxuXG4ucXVpenplZFRyYWZmaWNTaWduIHtcbn1cbi5xdWl6T3B0aW9uSWNvbiB7XG4gICAgY29sb3I6ICNkZGQ7XG59XG5cbi5jYXJkID4gLmljb24ge1xuICAgIGZsb2F0OmxlZnQ7XG4gICAgcGFkZGluZzo1cHg7XG4gICAgd2lkdGg6MjBweDtcbn1cblxuLmNhcmQge1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1pbi1oZWlnaHQ6NTBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkJveCAuY2FyZC1ib2R5IHtcbiAgICBjb2xvcjogIzMzMyAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xuICAgIC8qIG1hcmdpbjogMXB4OyAqL1xufVxuXG4ucXVpek9wdGlvbkJveCAuY2FyZC1ib2R5OmhvdmVyIHtcbiAgICBjb2xvcjogYmxhY2sgIWltcG9ydGFudDtcbiAgICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiNlZWVlZWU7ICovXG4gICAgLyogYm9yZGVyOiAxcHggc29saWQgYmxhY2s7ICovXG59Il19 */"
+module.exports = ".quizOptionCard:hover{\n    /* background-color:#36b9cc !important; */\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    background-color:#f6c23e !important;\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizzedTrafficSign {\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionBox .card-body .bg-light{\n    color: #333 !important;\n    background-color: #fff;\n    border: 1px solid white;\n    border-radius: 3px;\n    /* margin: 1px; */\n}\n\n.quizOptionBox .card-body:hover {\n    color: black !important;\n    /* background-color:#eeeeee; */\n    /* border: 1px solid black; */\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQ0FBMEM7SUFDMUMsZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0ksb0NBQW9DO0lBQ3BDLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLFVBQVU7SUFDVixXQUFXO0lBQ1gsY0FBYztDQUNqQjs7QUFFRDtDQUNDOztBQUNEO0lBQ0ksWUFBWTtDQUNmOztBQUVEO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixXQUFXO0NBQ2Q7O0FBRUQ7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLHlCQUF5QjtDQUM1Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2Qix1QkFBdUI7SUFDdkIsd0JBQXdCO0lBQ3hCLG1CQUFtQjtJQUNuQixrQkFBa0I7Q0FDckI7O0FBRUQ7SUFDSSx3QkFBd0I7SUFDeEIsK0JBQStCO0lBQy9CLDhCQUE4QjtDQUNqQyIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnF1aXpPcHRpb25DYXJkOmhvdmVye1xuICAgIC8qIGJhY2tncm91bmQtY29sb3I6IzM2YjljYyAhaW1wb3J0YW50OyAqL1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnF1aXpPcHRpb25DYXJkOmFjdGl2ZXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNmNmMyM2UgIWltcG9ydGFudDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5xdWl6Qm94IHtcbiAgICBsZWZ0OmF1dG87XG4gICAgcmlnaHQ6YXV0bztcbiAgICBtYXJnaW46MCBhdXRvO1xufVxuXG4ucXVpenplZFRyYWZmaWNTaWduIHtcbn1cbi5xdWl6T3B0aW9uSWNvbiB7XG4gICAgY29sb3I6ICNkZGQ7XG59XG5cbi5jYXJkID4gLmljb24ge1xuICAgIGZsb2F0OmxlZnQ7XG4gICAgcGFkZGluZzo1cHg7XG4gICAgd2lkdGg6MjBweDtcbn1cblxuLmNhcmQge1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1pbi1oZWlnaHQ6NTBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkJveCAuY2FyZC1ib2R5IC5iZy1saWdodHtcbiAgICBjb2xvcjogIzMzMyAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xuICAgIC8qIG1hcmdpbjogMXB4OyAqL1xufVxuXG4ucXVpek9wdGlvbkJveCAuY2FyZC1ib2R5OmhvdmVyIHtcbiAgICBjb2xvcjogYmxhY2sgIWltcG9ydGFudDtcbiAgICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiNlZWVlZWU7ICovXG4gICAgLyogYm9yZGVyOiAxcHggc29saWQgYmxhY2s7ICovXG59Il19 */"
 
 /***/ }),
 
@@ -621,7 +621,7 @@ module.exports = ".quizOptionCard:hover{\n    /* background-color:#36b9cc !impor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card bg-light quizOptionCard\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\" (click)=\"clickedAnswer()\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button *ngIf=\"showContinueButton\">Button here</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>"
+module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card quizOptionCard\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\" (click)=\"clickedAnswer(quizOption)\" [ngClass]=\"{'bg-light': quizOption.status === 'unset',\n                            'bg-success': quizOption.status === 'correct',\n                            'bg-warning': quizOption.status === 'chosenIncorrect',\n                            'bg-secondary': quizOption.status === 'incorrect'}\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button *ngIf=\"showContinueButton\">Button here</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>\n<!-- \n  <div class=\"container\">\n        <h4>NgClass</h4>\n        <div *ngFor=\"let celeb of singers\">\n          <p [ngClass]=\"{\n            'text-success':celeb.country === 'USA',\n            'text-secondary':celeb.country === 'Canada',\n            'text-danger':celeb.country === 'Puorto Rico',\n            'text-info':celeb.country === 'India'\n          }\">{{ celeb.artist }} ({{ celeb.country }})\n        </p>\n        </div>\n        </div> -->"
 
 /***/ }),
 
@@ -647,11 +647,9 @@ var QuizComponent = /** @class */ (function () {
         this.quizOptionsAvailablePositions = [0, 1, 2, 3];
         this.showContinueButton = false;
     }
-    QuizComponent.prototype.clickedAnswer = function () {
-        var clickedSignCode = 'A1';
-        var correct = this.checkAnswer(clickedSignCode);
-        console.log('your answer is: ' + correct);
-        this.feedbackTime();
+    QuizComponent.prototype.clickedAnswer = function (quizOption) {
+        var correct = this.checkAnswer(quizOption.code);
+        this.feedbackTime(quizOption);
     };
     QuizComponent.prototype.checkAnswer = function (clickedSignCode) {
         // throw new Error("Method not implemented.");
@@ -662,14 +660,27 @@ var QuizComponent = /** @class */ (function () {
             return false;
         }
     };
-    QuizComponent.prototype.feedbackTime = function () {
+    QuizComponent.prototype.feedbackTime = function (quizOption) {
         var _this = this;
-        this.showFeedback();
-        console.log('let\'s wait, shall we?');
+        this.showFeedback(quizOption);
+        // console.log('let\'s wait, shall we?');
         setTimeout(function () { _this.newQuestion(); }, 4000);
     };
-    QuizComponent.prototype.showFeedback = function () {
+    QuizComponent.prototype.showFeedback = function (quizOption) {
+        var _this = this;
         this.showContinueButton = true;
+        this.quizOptions.every(function (element) {
+            if (element.code === _this.correctSign.code) {
+                element.status = 'correct';
+            }
+            else if (element.code === quizOption.code) {
+                element.status = 'chosenIncorrect';
+            }
+            else {
+                element.status = 'incorrect';
+            }
+            return true;
+        });
     };
     QuizComponent.prototype.ngOnInit = function () {
         this.newQuestion();
@@ -677,10 +688,10 @@ var QuizComponent = /** @class */ (function () {
     QuizComponent.prototype.newQuestion = function () {
         this.showContinueButton = false;
         this.resetQuizOptionsAvailablePositions();
-        this.quizOptions = [{ code: 'A1', description: 'A1.'
-            }, { code: 'A2', description: 'A2.'
-            }, { code: 'A3', description: 'A3.'
-            }, { code: 'A4', description: 'A4.' }];
+        this.quizOptions = [{ code: 'A1', description: 'A1.', status: 'unset'
+            }, { code: 'A2', description: 'A2.', status: 'unset'
+            }, { code: 'A3', description: 'A3.', status: 'unset'
+            }, { code: 'A4', description: 'A4.', status: 'unset' }];
         this.setCorrectSignInQuizOptions();
         this.setIncorrectOptionInQuizOptions();
         this.setIncorrectOptionInQuizOptions();
@@ -717,12 +728,14 @@ var QuizComponent = /** @class */ (function () {
         }
     };
     QuizComponent.prototype.getUniqueRandomNumberBelow4 = function () {
+        // make check if size of quizOptionsAvailablePositions is 1
+        // if yes, then pop that as the next index instead of looking for a new unique random number
         var randomNumberAvailable = false;
         var randomNumber;
         this.isRandomNumberAvailableInQuizOptions(randomNumber);
         var i = 0;
         while (!randomNumberAvailable) {
-            console.log('attempt' + ++i);
+            console.log('attempt to find a random available number ' + ++i);
             randomNumber = this.getRandomNumberBelow4();
             randomNumberAvailable = this.isRandomNumberAvailableInQuizOptions(randomNumber);
         }

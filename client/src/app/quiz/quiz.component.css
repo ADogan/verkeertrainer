@@ -36,7 +36,7 @@
     background-color:#f8f9fc;
 }
 
-.quizOptionBox .card-body {
+.quizOptionBox .card-body .bg-light{
     color: #333 !important;
     background-color: #fff;
     border: 1px solid white;

@@ -15,9 +15,12 @@
     
                 <div class="row">
                     <div class="col-lg-6 mb-4 quizOptionBox" *ngFor="let quizOption of quizOptions; let i=index">
-                        <div class="card bg-light quizOptionCard">
+                        <div class="card quizOptionCard">
                             <span class="icon quizOptionIcon"><i>{{i+1}}</i></span>
-                            <div class="card-body" (click)="clickedAnswer()">
+                            <div class="card-body" (click)="clickedAnswer(quizOption)" [ngClass]="{'bg-light': quizOption.status === 'unset',
+                            'bg-success': quizOption.status === 'correct',
+                            'bg-warning': quizOption.status === 'chosenIncorrect',
+                            'bg-secondary': quizOption.status === 'incorrect'}">
                                 {{quizOption.description}}
                             </div>
                         </div>
@@ -31,3 +34,16 @@
 
     </div>
   </div>
+<!-- 
+  <div class="container">
+        <h4>NgClass</h4>
+        <div *ngFor="let celeb of singers">
+          <p [ngClass]="{
+            'text-success':celeb.country === 'USA',
+            'text-secondary':celeb.country === 'Canada',
+            'text-danger':celeb.country === 'Puorto Rico',
+            'text-info':celeb.country === 'India'
+          }">{{ celeb.artist }} ({{ celeb.country }})
+        </p>
+        </div>
+        </div> -->
