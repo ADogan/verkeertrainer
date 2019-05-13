@@ -22,6 +22,7 @@ import { TopbarComponent } from './main_layout/topbar/topbar.component';
 import { FooterComponent } from './main_layout/footer/footer.component';
 import { LogoutModalComponent } from './main_layout/modals/logout-modal.component';
 import { MessagesDropdownComponent } from './main_layout/topbar/messages/messages-dropdown.component';
+import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MessagesDropdownComponent } from './main_layout/topbar/messages/message
     FooterComponent,
     LogoutModalComponent,
     QuizComponent,
-    MessagesDropdownComponent
+    MessagesDropdownComponent,
+    QuizresultsComponent
   ],
   imports: [
     BrowserModule,

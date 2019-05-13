@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IQuizOption } from './quiz-option.model';
 import { TrafficSignsService } from '../services/traffic-signs.service';
-import { RecursiveAstVisitor } from '@angular/compiler';
 
 @Component({
   selector: 'app-quiz',
@@ -9,18 +8,39 @@ import { RecursiveAstVisitor } from '@angular/compiler';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  quizOptions: IQuizOption[];
+  quizOptionsAvailablePositions: number[] = [ 0, 1, 2, 3 ];
+  currentSignImageFileName: string;
+  correctSign;
+  feedbackPeriod = false;
+  showContinueButton = false;
+  questionNumber = 0;
+  feedbackWaitTimeInMs = 4000;
+  timeoutTimer;
 
+  /*
+    Methods called from outside this class:
+  */
   constructor(private trafficSignsService: TrafficSignsService ) {}
-   quizOptions: IQuizOption[];
-   quizOptionsAvailablePositions: number[] = [ 0, 1, 2, 3 ];
-   currentSignImageFileName: string;
-   correctSign;
-   showContinueButton = false;
+
+  ngOnInit() {
+    this.newQuestion();
+  }
 
   clickedAnswer(quizOption) {
-    const correct = this.checkAnswer(quizOption.code);
-    this.feedbackTime(quizOption);
+    if (!this.feedbackPeriod) {
+      this.feedbackPeriod = true;
+      const correct = this.checkAnswer(quizOption.code);
+      this.feedbackTime(quizOption);
+    } else {
+      console.log(this.feedbackPeriod);
+    }
   }
+
+  /*
+    Methods only called from inside this class
+  */
+
   checkAnswer(clickedSignCode: string): boolean {
     // throw new Error("Method not implemented.");
     if ( clickedSignCode === this.correctSign.code ) {
@@ -29,16 +49,30 @@ export class QuizComponent implements OnInit {
       return false;
     }
   }
-  feedbackTime(quizOption) {
+  feedbackTime(quizOption: IQuizOption) {
+    console.log('start feedback');
     this.showFeedback(quizOption);
-    // console.log('let\'s wait, shall we?');
-    // setTimeout(() => {  this.newQuestion(); }, 10000);
+    this.setTimeoutTimer();
   }
   nextQuestion() {
     this.newQuestion();
   }
 
-  showFeedback(quizOption) {
+  setTimeoutTimer() {
+    this.timeoutTimer = setTimeout(() => {
+      if (this.feedbackPeriod) {
+        this.newQuestion();
+      } else {
+        console.log('timer over but feedbackperiod is false, so the user must have pressed continue.')
+      }
+    }, this.feedbackWaitTimeInMs);
+  }
+
+  clearTimeoutTimer() {
+    clearTimeout(this.timeoutTimer);
+  }
+
+  showFeedback(quizOption: IQuizOption) {
     this.showContinueButton = true;
     this.quizOptions.every(element => {
       if (element.code === this.correctSign.code ) {
@@ -52,26 +86,24 @@ export class QuizComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.newQuestion();
-  }
-
   newQuestion() {
-    this.showContinueButton = false;
+    this.feedbackPeriod = false;
+    this.clearTimeoutTimer();
+    this.questionNumber++;
 
-   this.resetQuizOptionsAvailablePositions();
-    this.quizOptions = [ { code: 'A1', description: 'A1.', status: 'unset'
-      }, { code: 'A2', description: 'A2.', status: 'unset'
-      }, { code: 'A3', description: 'A3.', status: 'unset'
-      }, { code: 'A4', description: 'A4.', status: 'unset' }];
-
+    this.resetQuizOptions();
     this.setCorrectSignInQuizOptions();
     this.setIncorrectOptionInQuizOptions();
     this.setIncorrectOptionInQuizOptions();
     this.setIncorrectOptionInQuizOptions();
 
+    this.showContinueButton = false;
   }
-  resetQuizOptionsAvailablePositions() {
+  resetQuizOptions() {
+    this.quizOptions = [ { code: 'A1', description: 'A1.', status: 'unset'
+      }, { code: 'A2', description: 'A2.', status: 'unset'
+      }, { code: 'A3', description: 'A3.', status: 'unset'
+      }, { code: 'A4', description: 'A4.', status: 'unset' }];
     this.quizOptionsAvailablePositions = [ 0, 1, 2, 3 ];
   }
 

@@ -1,10 +1,8 @@
 .quizOptionCard:hover{
-    /* background-color:#36b9cc !important; */
     cursor: pointer;
 }
 
 .quizOptionCard:active{
-    background-color:#f6c23e !important;
     cursor: pointer;
 }
 
@@ -12,10 +10,6 @@
     left:auto;
     right:auto;
     margin:0 auto;
-}
-
-.quizzedTrafficSign {
-
 }
 
 .quizOptionIcon {
@@ -31,6 +25,7 @@
 .card {
     float: left;
     min-height:50px;
+    min-width: 230px;
     display: inline;
 }
 
@@ -38,40 +33,45 @@
     background-color:#f8f9fc;
 }
 
-.quizOptionCard > .bg-light{
+.quizOptionBox > .bg-light{
     color: #333 !important;
     background-color: #fff !important;
-    border: 1px solid white;
+    border: 1px solid lightgrey;
     border-radius: 3px;
 }
 
-.quizOptionCard > .bg-success{
+.quizOptionBox > .bg-light:hover {
+    /* color: white !important; */
+    /* background-color: #14D4F4 !important; */
+    border: 1px solid black;
+    /* box-shadow: 2px 2px 8px black; */
+}
+
+.quizOptionBox > .bg-success{
     color: #fff !important;
     background-color: #8EE000 !important;
     border: 1px solid #8EE000;
     border-radius: 3px;
 }
 
-.quizOptionCard > .bg-warning{
+.quizOptionBox > .bg-success:hover{
+    color: #fff !important;
+    background-color: #8EE000 !important;
+    border: 1px solid #8EE000;
+    border-radius: 3px;
+}
+
+.quizOptionBox > .bg-warning{
     color: #fff !important;
     background-color: #FFC300 !important;
     border: 1px solid #FFC300;
     border-radius: 3px;
 }
 
-
-.quizOptionCard > .bg-secondary{
+.quizOptionBox > .bg-secondary{
     color: #fff !important;
     background-color: #777777 !important;
     border: 1px solid #777777;
     border-radius: 3px;
 }
 
-
-.quizOptionBox .card-body:hover {
-    color: white !important;
-    background-color: #14D4F4 !important;
-    border: 1px solid #14D4F4;
-    box-shadow: 2px 2px 8px #BCE9FF;
-
-}

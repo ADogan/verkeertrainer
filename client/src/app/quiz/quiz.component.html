@@ -4,7 +4,7 @@
       <div class="col-xl-9 col-lg-8 quizBox">
         <div class="card shadow mb-4">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Verkeersborden Quiz</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Verkeersborden Quiz; Vraag nummer: {{questionNumber}}</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body quizBoxBody">
@@ -15,12 +15,12 @@
     
                 <div class="row">
                     <div class="col-lg-6 mb-4 quizOptionBox" *ngFor="let quizOption of quizOptions; let i=index">
-                        <div class="card quizOptionCard">
+                        <div class="card quizOptionCard" (click)="clickedAnswer(quizOption)" [ngClass]="{'bg-light': quizOption.status === 'unset',
+                        'bg-success': quizOption.status === 'correct',
+                        'bg-warning': quizOption.status === 'chosenIncorrect',
+                        'bg-secondary': quizOption.status === 'incorrect'}">
                             <span class="icon quizOptionIcon"><i>{{i+1}}</i></span>
-                            <div class="card-body" (click)="clickedAnswer(quizOption)" [ngClass]="{'bg-light': quizOption.status === 'unset',
-                            'bg-success': quizOption.status === 'correct',
-                            'bg-warning': quizOption.status === 'chosenIncorrect',
-                            'bg-secondary': quizOption.status === 'incorrect'}">
+                            <div class="card-body">
                                 {{quizOption.description}}
                             </div>
                         </div>

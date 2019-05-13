@@ -152,6 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./main_layout/footer/footer.component */ "./src/app/main_layout/footer/footer.component.ts");
 /* harmony import */ var _main_layout_modals_logout_modal_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./main_layout/modals/logout-modal.component */ "./src/app/main_layout/modals/logout-modal.component.ts");
 /* harmony import */ var _main_layout_topbar_messages_messages_dropdown_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./main_layout/topbar/messages/messages-dropdown.component */ "./src/app/main_layout/topbar/messages/messages-dropdown.component.ts");
+/* harmony import */ var _quiz_quizresults_quizresults_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./quiz/quizresults/quizresults.component */ "./src/app/quiz/quizresults/quizresults.component.ts");
 
 // Framework modules
 
@@ -168,6 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Main layout modules
+
 
 
 
@@ -190,7 +192,8 @@ var AppModule = /** @class */ (function () {
                 _main_layout_footer_footer_component__WEBPACK_IMPORTED_MODULE_14__["FooterComponent"],
                 _main_layout_modals_logout_modal_component__WEBPACK_IMPORTED_MODULE_15__["LogoutModalComponent"],
                 _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_10__["QuizComponent"],
-                _main_layout_topbar_messages_messages_dropdown_component__WEBPACK_IMPORTED_MODULE_16__["MessagesDropdownComponent"]
+                _main_layout_topbar_messages_messages_dropdown_component__WEBPACK_IMPORTED_MODULE_16__["MessagesDropdownComponent"],
+                _quiz_quizresults_quizresults_component__WEBPACK_IMPORTED_MODULE_17__["QuizresultsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -223,7 +226,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
-/* harmony import */ var _traffic_signs_traffic_signs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./traffic-signs/traffic-signs.component */ "./src/app/traffic-signs/traffic-signs.component.ts");
+/* harmony import */ var _quiz_quizresults_quizresults_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./quiz/quizresults/quizresults.component */ "./src/app/quiz/quizresults/quizresults.component.ts");
+/* harmony import */ var _traffic_signs_traffic_signs_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./traffic-signs/traffic-signs.component */ "./src/app/traffic-signs/traffic-signs.component.ts");
+
 
 
 
@@ -236,8 +241,9 @@ var routes = [
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
     { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_3__["RegisterComponent"] },
     { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_4__["AboutComponent"] },
-    { path: 'trafficSigns', component: _traffic_signs_traffic_signs_component__WEBPACK_IMPORTED_MODULE_6__["TrafficSignsComponent"] },
+    { path: 'trafficSigns', component: _traffic_signs_traffic_signs_component__WEBPACK_IMPORTED_MODULE_7__["TrafficSignsComponent"] },
     { path: 'trafficSigns/quiz/new', component: _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_5__["QuizComponent"] },
+    { path: 'quizresults', component: _quiz_quizresults_quizresults_component__WEBPACK_IMPORTED_MODULE_6__["QuizresultsComponent"] },
     { path: '**', redirectTo: 'trafficSigns' }
 ];
 var AppRoutingModule = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes);
@@ -462,7 +468,7 @@ module.exports = ".disabled {\n    -webkit-text-decoration-line: line-through;\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- Sidebar -->\n<ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\n\n  <!-- Sidebar - Brand -->\n  <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" routerLink=\"index\">\n    <div class=\"sidebar-brand-icon rotate-n-15\">\n      <i class=\"fas fa-laugh-wink\"></i>\n    </div>\n    <div class=\"sidebar-brand-text mx-3\">Verkeertrainer</div>\n  </a>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider my-0\">\n\n  <!-- Nav Item - Dashboard -->\n  <li class=\"nav-item active\">\n    <a class=\"nav-link\" routerLink=\"/home\">\n      <i class=\"fas fa-fw fa-tachometer-alt\"></i>\n      <span>Dashboard</span></a>\n  </li>\n\n  <hr class=\"sidebar-divider\">\n  <div class=\"sidebar-heading\">    Verkeersborden  </div>\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link\" routerLink=\"/trafficSigns\">\n        <i class=\"fas fa-fw fa-sign\"></i>\n        <span>Verkeersborden Overzicht</span></a>\n    </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" routerLink=\"/trafficSigns/quiz/new\">\n      <i class=\"fas fa-fw fa-sign\"></i>\n      <span>Borden Quiz</span></a>\n  </li>\n\n  <hr class=\"sidebar-divider\">\n  <div class=\"sidebar-heading\"> Rijbewijs B </div>\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link disabled\" href=\"#\">\n        <i class=\"fas fa-fw fa-car\"></i>\n        <span>Verkeersregels</span></a>\n    </li>\n    <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" href=\"#\">\n          <i class=\"fas fa-fw fa-car\"></i>\n          <span>Verkeersinzicht</span></a>\n      </li>\n      <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">\n            <i class=\"fas fa-fw fa-car\"></i>\n            <span>Gevaarherkenning</span></a>\n        </li>\n\n  <!-- Nav Item - Pages Collapse Menu -->\n  <li class=\"nav-item\">\n    <a class=\"nav-link collapsed\" routerLink=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\n      <i class=\"fas fa-fw fa-cog\"></i>\n      <span>Oefeningen</span>\n    </a>\n    <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\n      <div class=\"bg-white py-2 collapse-inner rounded\">\n        <h6 class=\"collapse-header\">Rijbewijs B quiz:</h6>\n        <a class=\"collapse-item\" routerLink=\"buttons\">Nieuw</a>\n        <a class=\"collapse-item\" routerLink=\"cards\">Afgenomen toetsen</a>\n      </div>\n    </div>\n  </li>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider d-none d-md-block\">\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link \" routerLink=\"/about\">\n        <i class=\"fas fa-fw fa-info\"></i>\n        <span>Over</span></a>\n    </li>\n  <!-- Sidebar Toggler (Sidebar) -->\n  <div class=\"text-center d-none d-md-inline\">\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\n  </div>\n\n</ul>\n<!-- End of Sidebar -->"
+module.exports = "\n<!-- Sidebar -->\n<ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\n\n  <!-- Sidebar - Brand -->\n  <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" routerLink=\"index\">\n    <div class=\"sidebar-brand-icon rotate-n-15\">\n      <i class=\"fas fa-laugh-wink\"></i>\n    </div>\n    <div class=\"sidebar-brand-text mx-3\">Verkeertrainer</div>\n  </a>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider my-0\">\n\n  <!-- Nav Item - Dashboard -->\n  <li class=\"nav-item active\">\n    <a class=\"nav-link\" routerLink=\"/home\">\n      <i class=\"fas fa-fw fa-tachometer-alt\"></i>\n      <span>Dashboard</span></a>\n  </li>\n\n  <hr class=\"sidebar-divider\">\n  <div class=\"sidebar-heading\">    Verkeersborden  </div>\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link\" routerLink=\"/trafficSigns\">\n        <i class=\"fas fa-fw fa-sign\"></i>\n        <span>Verkeersborden Overzicht</span></a>\n    </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" routerLink=\"/trafficSigns/quiz/new\">\n      <i class=\"fas fa-fw fa-sign\"></i>\n      <span>Borden Quiz</span></a>\n  </li>\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link\" routerLink=\"/quizresults\">\n        <i class=\"fas fa-fw fa-sign\"></i>\n        <span>Resultaten</span></a>\n    </li>\n\n  <hr class=\"sidebar-divider\">\n  <div class=\"sidebar-heading\"> Rijbewijs B </div>\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link disabled\" href=\"#\">\n        <i class=\"fas fa-fw fa-car\"></i>\n        <span>Verkeersregels</span></a>\n    </li>\n    <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" href=\"#\">\n          <i class=\"fas fa-fw fa-car\"></i>\n          <span>Verkeersinzicht</span></a>\n      </li>\n      <li class=\"nav-item\">\n          <a class=\"nav-link disabled\" href=\"#\">\n            <i class=\"fas fa-fw fa-car\"></i>\n            <span>Gevaarherkenning</span></a>\n        </li>\n\n  <!-- Nav Item - Pages Collapse Menu -->\n  <li class=\"nav-item\">\n    <a class=\"nav-link collapsed\" routerLink=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\n      <i class=\"fas fa-fw fa-cog\"></i>\n      <span>Oefeningen</span>\n    </a>\n    <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\n      <div class=\"bg-white py-2 collapse-inner rounded\">\n        <h6 class=\"collapse-header\">Rijbewijs B quiz:</h6>\n        <a class=\"collapse-item\" routerLink=\"buttons\">Nieuw</a>\n        <a class=\"collapse-item\" routerLink=\"cards\">Afgenomen toetsen</a>\n      </div>\n    </div>\n  </li>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider d-none d-md-block\">\n\n  <li class=\"nav-item\">\n      <a class=\"nav-link \" routerLink=\"/about\">\n        <i class=\"fas fa-fw fa-info\"></i>\n        <span>Over</span></a>\n    </li>\n  <!-- Sidebar Toggler (Sidebar) -->\n  <div class=\"text-center d-none d-md-inline\">\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\n  </div>\n\n</ul>\n<!-- End of Sidebar -->"
 
 /***/ }),
 
@@ -610,7 +616,7 @@ var TopbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".quizOptionCard:hover{\n    /* background-color:#36b9cc !important; */\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    background-color:#f6c23e !important;\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizzedTrafficSign {\n\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionCard > .bg-light{\n    color: #333 !important;\n    background-color: #fff !important;\n    border: 1px solid white;\n    border-radius: 3px;\n}\n\n.quizOptionCard > .bg-success{\n    color: #fff !important;\n    background-color: #8EE000 !important;\n    border: 1px solid #8EE000;\n    border-radius: 3px;\n}\n\n.quizOptionCard > .bg-warning{\n    color: #fff !important;\n    background-color: #FFC300 !important;\n    border: 1px solid #FFC300;\n    border-radius: 3px;\n}\n\n.quizOptionCard > .bg-secondary{\n    color: #fff !important;\n    background-color: #777777 !important;\n    border: 1px solid #777777;\n    border-radius: 3px;\n}\n\n.quizOptionBox .card-body:hover {\n    color: white !important;\n    background-color: #14D4F4 !important;\n    border: 1px solid #14D4F4;\n    box-shadow: 2px 2px 8px #BCE9FF;\n\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQ0FBMEM7SUFDMUMsZ0JBQWdCO0NBQ25COztBQUVEO0lBQ0ksb0NBQW9DO0lBQ3BDLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLFVBQVU7SUFDVixXQUFXO0lBQ1gsY0FBYztDQUNqQjs7QUFFRDs7Q0FFQzs7QUFFRDtJQUNJLFlBQVk7Q0FDZjs7QUFFRDtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osV0FBVztDQUNkOztBQUVEO0lBQ0ksWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSx5QkFBeUI7Q0FDNUI7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIsa0NBQWtDO0lBQ2xDLHdCQUF3QjtJQUN4QixtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEI7O0FBR0Q7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEI7O0FBR0Q7SUFDSSx3QkFBd0I7SUFDeEIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixnQ0FBZ0M7O0NBRW5DIiwiZmlsZSI6InNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucXVpek9wdGlvbkNhcmQ6aG92ZXJ7XG4gICAgLyogYmFja2dyb3VuZC1jb2xvcjojMzZiOWNjICFpbXBvcnRhbnQ7ICovXG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4ucXVpek9wdGlvbkNhcmQ6YWN0aXZle1xuICAgIGJhY2tncm91bmQtY29sb3I6I2Y2YzIzZSAhaW1wb3J0YW50O1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnF1aXpCb3gge1xuICAgIGxlZnQ6YXV0bztcbiAgICByaWdodDphdXRvO1xuICAgIG1hcmdpbjowIGF1dG87XG59XG5cbi5xdWl6emVkVHJhZmZpY1NpZ24ge1xuXG59XG5cbi5xdWl6T3B0aW9uSWNvbiB7XG4gICAgY29sb3I6ICNkZGQ7XG59XG5cbi5jYXJkID4gLmljb24ge1xuICAgIGZsb2F0OmxlZnQ7XG4gICAgcGFkZGluZzo1cHg7XG4gICAgd2lkdGg6MjBweDtcbn1cblxuLmNhcmQge1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1pbi1oZWlnaHQ6NTBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkNhcmQgPiAuYmctbGlnaHR7XG4gICAgY29sb3I6ICMzMzMgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkNhcmQgPiAuYmctc3VjY2Vzc3tcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM4RUUwMDAgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjOEVFMDAwO1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbn1cblxuLnF1aXpPcHRpb25DYXJkID4gLmJnLXdhcm5pbmd7XG4gICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZDMzAwICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI0ZGQzMwMDtcbiAgICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cblxuLnF1aXpPcHRpb25DYXJkID4gLmJnLXNlY29uZGFyeXtcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM3Nzc3NzcgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjNzc3Nzc3O1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbn1cblxuXG4ucXVpek9wdGlvbkJveCAuY2FyZC1ib2R5OmhvdmVyIHtcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTRENEY0ICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzE0RDRGNDtcbiAgICBib3gtc2hhZG93OiAycHggMnB4IDhweCAjQkNFOUZGO1xuXG59Il19 */"
+module.exports = ".quizOptionCard:hover{\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    min-width: 230px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionBox > .bg-light{\n    color: #333 !important;\n    background-color: #fff !important;\n    border: 1px solid lightgrey;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-light:hover {\n    /* color: white !important; */\n    /* background-color: #14D4F4 !important; */\n    border: 1px solid black;\n    /* box-shadow: 2px 2px 8px black; */\n}\n\n.quizOptionBox > .bg-success{\n    color: #fff !important;\n    background-color: #8EE000 !important;\n    border: 1px solid #8EE000;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-success:hover{\n    color: #fff !important;\n    background-color: #8EE000 !important;\n    border: 1px solid #8EE000;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-warning{\n    color: #fff !important;\n    background-color: #FFC300 !important;\n    border: 1px solid #FFC300;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-secondary{\n    color: #fff !important;\n    background-color: #777777 !important;\n    border: 1px solid #777777;\n    border-radius: 3px;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxVQUFVO0lBQ1YsV0FBVztJQUNYLGNBQWM7Q0FDakI7O0FBRUQ7SUFDSSxZQUFZO0NBQ2Y7O0FBRUQ7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLFdBQVc7Q0FDZDs7QUFFRDtJQUNJLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLHlCQUF5QjtDQUM1Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixrQ0FBa0M7SUFDbEMsNEJBQTRCO0lBQzVCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLDhCQUE4QjtJQUM5QiwyQ0FBMkM7SUFDM0Msd0JBQXdCO0lBQ3hCLG9DQUFvQztDQUN2Qzs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0QiIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnF1aXpPcHRpb25DYXJkOmhvdmVye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnF1aXpPcHRpb25DYXJkOmFjdGl2ZXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5xdWl6Qm94IHtcbiAgICBsZWZ0OmF1dG87XG4gICAgcmlnaHQ6YXV0bztcbiAgICBtYXJnaW46MCBhdXRvO1xufVxuXG4ucXVpek9wdGlvbkljb24ge1xuICAgIGNvbG9yOiAjZGRkO1xufVxuXG4uY2FyZCA+IC5pY29uIHtcbiAgICBmbG9hdDpsZWZ0O1xuICAgIHBhZGRpbmc6NXB4O1xuICAgIHdpZHRoOjIwcHg7XG59XG5cbi5jYXJkIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtaW4taGVpZ2h0OjUwcHg7XG4gICAgbWluLXdpZHRoOiAyMzBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodHtcbiAgICBjb2xvcjogIzMzMyAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBsaWdodGdyZXk7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodDpob3ZlciB7XG4gICAgLyogY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7ICovXG4gICAgLyogYmFja2dyb3VuZC1jb2xvcjogIzE0RDRGNCAhaW1wb3J0YW50OyAqL1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xuICAgIC8qIGJveC1zaGFkb3c6IDJweCAycHggOHB4IGJsYWNrOyAqL1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1zdWNjZXNze1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzhFRTAwMCAhaW1wb3J0YW50O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICM4RUUwMDA7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1zdWNjZXNzOmhvdmVye1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzhFRTAwMCAhaW1wb3J0YW50O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICM4RUUwMDA7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy13YXJuaW5ne1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGQzMwMCAhaW1wb3J0YW50O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNGRkMzMDA7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1zZWNvbmRhcnl7XG4gICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzc3Nzc3ICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzc3Nzc3NztcbiAgICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cbiJdfQ== */"
 
 /***/ }),
 
@@ -621,7 +627,7 @@ module.exports = ".quizOptionCard:hover{\n    /* background-color:#36b9cc !impor
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card quizOptionCard\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\" (click)=\"clickedAnswer(quizOption)\" [ngClass]=\"{'bg-light': quizOption.status === 'unset',\n                            'bg-success': quizOption.status === 'correct',\n                            'bg-warning': quizOption.status === 'chosenIncorrect',\n                            'bg-secondary': quizOption.status === 'incorrect'}\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button class=\"d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm\" *ngIf=\"showContinueButton\" (click)=\"nextQuestion()\">Volgende</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>"
+module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz; Vraag nummer: {{questionNumber}}</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card quizOptionCard\" (click)=\"clickedAnswer(quizOption)\" [ngClass]=\"{'bg-light': quizOption.status === 'unset',\n                        'bg-success': quizOption.status === 'correct',\n                        'bg-warning': quizOption.status === 'chosenIncorrect',\n                        'bg-secondary': quizOption.status === 'incorrect'}\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button class=\"d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm\" *ngIf=\"showContinueButton\" (click)=\"nextQuestion()\">Volgende</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>"
 
 /***/ }),
 
@@ -642,15 +648,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var QuizComponent = /** @class */ (function () {
+    /*
+      Methods called from outside this class:
+    */
     function QuizComponent(trafficSignsService) {
         this.trafficSignsService = trafficSignsService;
         this.quizOptionsAvailablePositions = [0, 1, 2, 3];
+        this.feedbackPeriod = false;
         this.showContinueButton = false;
+        this.questionNumber = 0;
+        this.feedbackWaitTimeInMs = 4000;
     }
-    QuizComponent.prototype.clickedAnswer = function (quizOption) {
-        var correct = this.checkAnswer(quizOption.code);
-        this.feedbackTime(quizOption);
+    QuizComponent.prototype.ngOnInit = function () {
+        this.newQuestion();
     };
+    QuizComponent.prototype.clickedAnswer = function (quizOption) {
+        if (!this.feedbackPeriod) {
+            this.feedbackPeriod = true;
+            var correct = this.checkAnswer(quizOption.code);
+            this.feedbackTime(quizOption);
+        }
+        else {
+            console.log(this.feedbackPeriod);
+        }
+    };
+    /*
+      Methods only called from inside this class
+    */
     QuizComponent.prototype.checkAnswer = function (clickedSignCode) {
         // throw new Error("Method not implemented.");
         if (clickedSignCode === this.correctSign.code) {
@@ -661,12 +685,26 @@ var QuizComponent = /** @class */ (function () {
         }
     };
     QuizComponent.prototype.feedbackTime = function (quizOption) {
+        console.log('start feedback');
         this.showFeedback(quizOption);
-        // console.log('let\'s wait, shall we?');
-        // setTimeout(() => {  this.newQuestion(); }, 10000);
+        this.setTimeoutTimer();
     };
     QuizComponent.prototype.nextQuestion = function () {
         this.newQuestion();
+    };
+    QuizComponent.prototype.setTimeoutTimer = function () {
+        var _this = this;
+        this.timeoutTimer = setTimeout(function () {
+            if (_this.feedbackPeriod) {
+                _this.newQuestion();
+            }
+            else {
+                console.log('timer over but feedbackperiod is false, so the user must have pressed continue.');
+            }
+        }, this.feedbackWaitTimeInMs);
+    };
+    QuizComponent.prototype.clearTimeoutTimer = function () {
+        clearTimeout(this.timeoutTimer);
     };
     QuizComponent.prototype.showFeedback = function (quizOption) {
         var _this = this;
@@ -684,22 +722,22 @@ var QuizComponent = /** @class */ (function () {
             return true;
         });
     };
-    QuizComponent.prototype.ngOnInit = function () {
-        this.newQuestion();
-    };
     QuizComponent.prototype.newQuestion = function () {
-        this.showContinueButton = false;
-        this.resetQuizOptionsAvailablePositions();
-        this.quizOptions = [{ code: 'A1', description: 'A1.', status: 'unset'
-            }, { code: 'A2', description: 'A2.', status: 'unset'
-            }, { code: 'A3', description: 'A3.', status: 'unset'
-            }, { code: 'A4', description: 'A4.', status: 'unset' }];
+        this.feedbackPeriod = false;
+        this.clearTimeoutTimer();
+        this.questionNumber++;
+        this.resetQuizOptions();
         this.setCorrectSignInQuizOptions();
         this.setIncorrectOptionInQuizOptions();
         this.setIncorrectOptionInQuizOptions();
         this.setIncorrectOptionInQuizOptions();
+        this.showContinueButton = false;
     };
-    QuizComponent.prototype.resetQuizOptionsAvailablePositions = function () {
+    QuizComponent.prototype.resetQuizOptions = function () {
+        this.quizOptions = [{ code: 'A1', description: 'A1.', status: 'unset'
+            }, { code: 'A2', description: 'A2.', status: 'unset'
+            }, { code: 'A3', description: 'A3.', status: 'unset'
+            }, { code: 'A4', description: 'A4.', status: 'unset' }];
         this.quizOptionsAvailablePositions = [0, 1, 2, 3];
     };
     QuizComponent.prototype.setCorrectSignInQuizOptions = function () {
@@ -766,6 +804,62 @@ var QuizComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_traffic_signs_service__WEBPACK_IMPORTED_MODULE_2__["TrafficSignsService"]])
     ], QuizComponent);
     return QuizComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/quiz/quizresults/quizresults.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/quiz/quizresults/quizresults.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpenJlc3VsdHMvcXVpenJlc3VsdHMuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/quiz/quizresults/quizresults.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/quiz/quizresults/quizresults.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  quizresults works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/quiz/quizresults/quizresults.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/quiz/quizresults/quizresults.component.ts ***!
+  \***********************************************************/
+/*! exports provided: QuizresultsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuizresultsComponent", function() { return QuizresultsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var QuizresultsComponent = /** @class */ (function () {
+    function QuizresultsComponent() {
+    }
+    QuizresultsComponent.prototype.ngOnInit = function () {
+    };
+    QuizresultsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-quizresults',
+            template: __webpack_require__(/*! ./quizresults.component.html */ "./src/app/quiz/quizresults/quizresults.component.html"),
+            styles: [__webpack_require__(/*! ./quizresults.component.css */ "./src/app/quiz/quizresults/quizresults.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], QuizresultsComponent);
+    return QuizresultsComponent;
 }());
 
 
