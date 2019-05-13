@@ -16,9 +16,10 @@
                 <div class="row">
                     <div class="col-lg-6 mb-4 quizOptionBox" *ngFor="let quizOption of quizOptions; let i=index">
                         <div class="card quizOptionCard" (click)="clickedAnswer(quizOption)" [ngClass]="{'bg-light': quizOption.status === 'unset',
-                        'bg-success': quizOption.status === 'correct',
-                        'bg-warning': quizOption.status === 'chosenIncorrect',
-                        'bg-secondary': quizOption.status === 'incorrect'}">
+                        'bg-success': quizOption.status === 'correct_chosen',
+                        'bg-warning': quizOption.status === 'correct_not_chosen',
+                        'bg-danger': quizOption.status === 'incorrect_chosen',
+                        'bg-secondary': quizOption.status === 'incorrect_not_chosen'}">
                             <span class="icon quizOptionIcon"><i>{{i+1}}</i></span>
                             <div class="card-body">
                                 {{quizOption.description}}

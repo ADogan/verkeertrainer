@@ -29,7 +29,7 @@
   --success: #8EE000;
   --info: #36b9cc;
   --warning: #FFC300;
-  --danger: #e74a3b;
+  --danger: #E53B3B;
   --light: #f8f9fc;
   --dark: #5a5c69;
   --breakpoint-xs: 0;
@@ -6958,13 +6958,14 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-  background-color: #e74a3b !important;
+  background-color: #E53B3B !important;
+  color: #FFF !important;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
-  background-color: #d52a1a !important;
+  background-color: #D33131 !important;
 }
 
 .bg-light {

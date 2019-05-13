@@ -616,7 +616,7 @@ var TopbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".quizOptionCard:hover{\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    min-width: 230px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionBox > .bg-light{\n    color: #333 !important;\n    background-color: #fff !important;\n    border: 1px solid lightgrey;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-light:hover {\n    border: 1px solid black;\n}\n\n.quizOptionBox > .bg-success{\n    color: #fff !important;\n    background-color: #8EE000 !important;\n    border: 1px solid #8EE000;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-warning{\n    color: #fff !important;\n    background-color: #FFC300 !important;\n    border: 1px solid #FFC300;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-secondary{\n    color: #fff !important;\n    background-color: #777777 !important;\n    border: 1px solid #777777;\n    border-radius: 3px;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxVQUFVO0lBQ1YsV0FBVztJQUNYLGNBQWM7Q0FDakI7O0FBRUQ7SUFDSSxZQUFZO0NBQ2Y7O0FBRUQ7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLFdBQVc7Q0FDZDs7QUFFRDtJQUNJLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGdCQUFnQjtDQUNuQjs7QUFFRDtJQUNJLHlCQUF5QjtDQUM1Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixrQ0FBa0M7SUFDbEMsNEJBQTRCO0lBQzVCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLHdCQUF3QjtDQUMzQjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0Qjs7QUFHRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0Qjs7QUFFRDtJQUNJLHVCQUF1QjtJQUN2QixxQ0FBcUM7SUFDckMsMEJBQTBCO0lBQzFCLG1CQUFtQjtDQUN0QiIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnF1aXpPcHRpb25DYXJkOmhvdmVye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnF1aXpPcHRpb25DYXJkOmFjdGl2ZXtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5xdWl6Qm94IHtcbiAgICBsZWZ0OmF1dG87XG4gICAgcmlnaHQ6YXV0bztcbiAgICBtYXJnaW46MCBhdXRvO1xufVxuXG4ucXVpek9wdGlvbkljb24ge1xuICAgIGNvbG9yOiAjZGRkO1xufVxuXG4uY2FyZCA+IC5pY29uIHtcbiAgICBmbG9hdDpsZWZ0O1xuICAgIHBhZGRpbmc6NXB4O1xuICAgIHdpZHRoOjIwcHg7XG59XG5cbi5jYXJkIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtaW4taGVpZ2h0OjUwcHg7XG4gICAgbWluLXdpZHRoOiAyMzBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodHtcbiAgICBjb2xvcjogIzMzMyAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBsaWdodGdyZXk7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodDpob3ZlciB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG59XG5cbi5xdWl6T3B0aW9uQm94ID4gLmJnLXN1Y2Nlc3N7XG4gICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOEVFMDAwICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzhFRTAwMDtcbiAgICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cblxuLnF1aXpPcHRpb25Cb3ggPiAuYmctd2FybmluZ3tcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkMzMDAgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjRkZDMzAwO1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbn1cblxuLnF1aXpPcHRpb25Cb3ggPiAuYmctc2Vjb25kYXJ5e1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzc3Nzc3NyAhaW1wb3J0YW50O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICM3Nzc3Nzc7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4iXX0= */"
+module.exports = ".quizOptionCard:hover{\n    cursor: pointer;\n}\n\n.quizOptionCard:active{\n    cursor: pointer;\n}\n\n.quizBox {\n    left:auto;\n    right:auto;\n    margin:0 auto;\n}\n\n.quizOptionIcon {\n    color: #ddd;\n}\n\n.card > .icon {\n    float:left;\n    padding:5px;\n    width:20px;\n    font-size: 0.5em;\n}\n\n.card {\n    float: left;\n    min-height:50px;\n    min-width: 230px;\n    display: inline;\n}\n\n.quizBoxBody {\n    background-color:#f8f9fc;\n}\n\n.quizOptionBox > .bg-light{\n    color: #333 !important;\n    background-color: #fff !important;\n    border: 1px solid lightgrey;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-light:hover {\n    border: 1px solid black;\n}\n\n.quizOptionBox > .bg-success{\n    color: #fff !important;\n    background-color: #8EE000 !important;\n    border: 1px solid #8EE000;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-warning{\n    color: #fff !important;\n    background-color: #FFC300 !important;\n    border: 1px solid #FFC300;\n    border-radius: 3px;\n}\n\n.quizOptionBox > .bg-secondary{\n    color: #fff !important;\n    background-color: #777777 !important;\n    border: 1px solid #777777;\n    border-radius: 3px;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSxVQUFVO0lBQ1YsV0FBVztJQUNYLGNBQWM7Q0FDakI7O0FBRUQ7SUFDSSxZQUFZO0NBQ2Y7O0FBRUQ7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLFdBQVc7SUFDWCxpQkFBaUI7Q0FDcEI7O0FBRUQ7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixnQkFBZ0I7Q0FDbkI7O0FBRUQ7SUFDSSx5QkFBeUI7Q0FDNUI7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIsa0NBQWtDO0lBQ2xDLDRCQUE0QjtJQUM1QixtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSx3QkFBd0I7Q0FDM0I7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEI7O0FBR0Q7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSx1QkFBdUI7SUFDdkIscUNBQXFDO0lBQ3JDLDBCQUEwQjtJQUMxQixtQkFBbUI7Q0FDdEIiLCJmaWxlIjoic3JjL2FwcC9xdWl6L3F1aXouY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5xdWl6T3B0aW9uQ2FyZDpob3ZlcntcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5xdWl6T3B0aW9uQ2FyZDphY3RpdmV7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4ucXVpekJveCB7XG4gICAgbGVmdDphdXRvO1xuICAgIHJpZ2h0OmF1dG87XG4gICAgbWFyZ2luOjAgYXV0bztcbn1cblxuLnF1aXpPcHRpb25JY29uIHtcbiAgICBjb2xvcjogI2RkZDtcbn1cblxuLmNhcmQgPiAuaWNvbiB7XG4gICAgZmxvYXQ6bGVmdDtcbiAgICBwYWRkaW5nOjVweDtcbiAgICB3aWR0aDoyMHB4O1xuICAgIGZvbnQtc2l6ZTogMC41ZW07XG59XG5cbi5jYXJkIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtaW4taGVpZ2h0OjUwcHg7XG4gICAgbWluLXdpZHRoOiAyMzBweDtcbiAgICBkaXNwbGF5OiBpbmxpbmU7XG59XG5cbi5xdWl6Qm94Qm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojZjhmOWZjO1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodHtcbiAgICBjb2xvcjogIzMzMyAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBsaWdodGdyZXk7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4ucXVpek9wdGlvbkJveCA+IC5iZy1saWdodDpob3ZlciB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG59XG5cbi5xdWl6T3B0aW9uQm94ID4gLmJnLXN1Y2Nlc3N7XG4gICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOEVFMDAwICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzhFRTAwMDtcbiAgICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cblxuLnF1aXpPcHRpb25Cb3ggPiAuYmctd2FybmluZ3tcbiAgICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkMzMDAgIWltcG9ydGFudDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjRkZDMzAwO1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbn1cblxuLnF1aXpPcHRpb25Cb3ggPiAuYmctc2Vjb25kYXJ5e1xuICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzc3Nzc3NyAhaW1wb3J0YW50O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICM3Nzc3Nzc7XG4gICAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4iXX0= */"
 
 /***/ }),
 
@@ -627,7 +627,7 @@ module.exports = ".quizOptionCard:hover{\n    cursor: pointer;\n}\n\n.quizOption
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz; Vraag nummer: {{questionNumber}}</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card quizOptionCard\" (click)=\"clickedAnswer(quizOption)\" [ngClass]=\"{'bg-light': quizOption.status === 'unset',\n                        'bg-success': quizOption.status === 'correct',\n                        'bg-warning': quizOption.status === 'chosenIncorrect',\n                        'bg-secondary': quizOption.status === 'incorrect'}\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button class=\"d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm\" *ngIf=\"showContinueButton\" (click)=\"nextQuestion()\">Volgende</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>"
+module.exports = "\n<div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-xl-9 col-lg-8 quizBox\">\n        <div class=\"card shadow mb-4\">\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Verkeersborden Quiz; Vraag nummer: {{questionNumber}}</h6>\n            </div>\n            <!-- Card Body -->\n            <div class=\"card-body quizBoxBody\">\n                <div class=\"text-center\">\n                    <img class=\"img-fluid px-3 px-sm-4 mt-3 mb-4 quizzedTrafficSign\" style=\"width: 25rem;\" src=\"assets/img/traffic_signs/{{currentSignImageFileName}}.png\" alt=\"\">\n                </div>\n                <p>Wat is de beschrijving van dit verkeersbord?</p>\n    \n                <div class=\"row\">\n                    <div class=\"col-lg-6 mb-4 quizOptionBox\" *ngFor=\"let quizOption of quizOptions; let i=index\">\n                        <div class=\"card quizOptionCard\" (click)=\"clickedAnswer(quizOption)\" [ngClass]=\"{'bg-light': quizOption.status === 'unset',\n                        'bg-success': quizOption.status === 'correct_chosen',\n                        'bg-warning': quizOption.status === 'correct_not_chosen',\n                        'bg-danger': quizOption.status === 'incorrect_chosen',\n                        'bg-secondary': quizOption.status === 'incorrect_not_chosen'}\">\n                            <span class=\"icon quizOptionIcon\"><i>{{i+1}}</i></span>\n                            <div class=\"card-body\">\n                                {{quizOption.description}}\n                            </div>\n                        </div>\n                    </div>\n                    <button class=\"d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm\" *ngIf=\"showContinueButton\" (click)=\"nextQuestion()\">Volgende</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    </div>\n  </div>"
 
 /***/ }),
 
@@ -653,11 +653,11 @@ var QuizComponent = /** @class */ (function () {
     */
     function QuizComponent(trafficSignsService) {
         this.trafficSignsService = trafficSignsService;
-        this.quizOptionsAvailablePositions = [0, 1, 2, 3];
         this.feedbackPeriod = false;
         this.showContinueButton = false;
         this.questionNumber = 0;
         this.feedbackWaitTimeInMs = 4000;
+        this.maxAmountOfChoices = 6;
     }
     QuizComponent.prototype.ngOnInit = function () {
         this.newQuestion();
@@ -676,7 +676,6 @@ var QuizComponent = /** @class */ (function () {
       Methods only called from inside this class
     */
     QuizComponent.prototype.checkAnswer = function (clickedSignCode) {
-        // throw new Error("Method not implemented.");
         if (clickedSignCode === this.correctSign.code) {
             return true;
         }
@@ -699,7 +698,7 @@ var QuizComponent = /** @class */ (function () {
                 _this.newQuestion();
             }
             else {
-                console.log('timer over but feedbackperiod is false, so the user must have pressed continue.');
+                console.log('timer is over but feedbackperiod is false, so the user must have pressed continue.');
             }
         }, this.feedbackWaitTimeInMs);
     };
@@ -710,14 +709,21 @@ var QuizComponent = /** @class */ (function () {
         var _this = this;
         this.showContinueButton = true;
         this.quizOptions.every(function (element) {
-            if (element.code === _this.correctSign.code) {
-                element.status = 'correct';
-            }
-            else if (element.code === quizOption.code) {
-                element.status = 'chosenIncorrect';
+            if (element.code === quizOption.code) {
+                if (element.code === _this.correctSign.code) {
+                    element.status = 'correct_chosen';
+                }
+                else {
+                    element.status = 'incorrect_chosen';
+                }
             }
             else {
-                element.status = 'incorrect';
+                if (element.code === _this.correctSign.code) {
+                    element.status = 'correct_not_chosen';
+                }
+                else {
+                    element.status = 'incorrect_not_chosen';
+                }
             }
             return true;
         });
@@ -727,18 +733,21 @@ var QuizComponent = /** @class */ (function () {
         this.clearTimeoutTimer();
         this.questionNumber++;
         this.resetQuizOptions();
-        this.setCorrectSignInQuizOptions();
-        this.setIncorrectOptionInQuizOptions();
-        this.setIncorrectOptionInQuizOptions();
-        this.setIncorrectOptionInQuizOptions();
         this.showContinueButton = false;
+        this.setCorrectSignInQuizOptions();
+        // start i with 1 because we have already set an option; the correctSign
+        for (var i = 1; i < this.maxAmountOfChoices; i++) {
+            this.setIncorrectOptionInQuizOptions();
+        }
     };
     QuizComponent.prototype.resetQuizOptions = function () {
-        this.quizOptions = [{ code: 'XZY', description: 'XZY.', status: 'unset'
-            }, { code: 'XZY', description: 'XZY.', status: 'unset'
-            }, { code: 'XZY', description: 'XZY.', status: 'unset'
-            }, { code: 'XZY', description: 'XZY.', status: 'unset' }];
-        this.quizOptionsAvailablePositions = [0, 1, 2, 3];
+        this.quizOptions = [];
+        this.quizOptionsAvailablePositions = [];
+        for (var i = 0; i < this.maxAmountOfChoices; i++) {
+            this.quizOptionsAvailablePositions.push(i);
+            var quizOption = { code: 'XZY' + i, description: 'XZY.' + i, status: 'unset' };
+            this.quizOptions.push(quizOption);
+        }
     };
     QuizComponent.prototype.setCorrectSignInQuizOptions = function () {
         var sign = this.setOptionInQuizOptions();
@@ -749,16 +758,14 @@ var QuizComponent = /** @class */ (function () {
         this.setOptionInQuizOptions();
     };
     QuizComponent.prototype.setOptionInQuizOptions = function () {
-        // Todo, check if the sign is not already present in the options
         var currentSign;
         var signAlreadyPresent = true;
         do {
             currentSign = this.trafficSignsService.getRandomTrafficSign();
-            //check if sign is present
             signAlreadyPresent = this.signIsAlreadyPresentAsAnOption(currentSign);
             console.log('sign not present???');
         } while (signAlreadyPresent);
-        var answerPosition = this.getUniqueRandomNumberBelow4();
+        var answerPosition = this.getUniqueRandomNumberBelowMaxAmountOfChoices();
         this.setSignAsOption(currentSign, answerPosition);
         return currentSign;
     };
@@ -778,7 +785,6 @@ var QuizComponent = /** @class */ (function () {
         return false;
     };
     QuizComponent.prototype.setSignAsOption = function (sign, quizoptionsIndex) {
-        console.log('setting to position: ' + quizoptionsIndex);
         this.quizOptions[quizoptionsIndex].description = sign.description;
         this.quizOptions[quizoptionsIndex].code = sign.code;
         this.removeFromAvailableOptionPositions(quizoptionsIndex);
@@ -789,15 +795,16 @@ var QuizComponent = /** @class */ (function () {
             this.quizOptionsAvailablePositions.splice(indexInAvailablePositions, 1);
         }
     };
-    QuizComponent.prototype.getUniqueRandomNumberBelow4 = function () {
+    QuizComponent.prototype.getUniqueRandomNumberBelowMaxAmountOfChoices = function () {
         // make check if size of quizOptionsAvailablePositions is 1
         // if yes, then pop that as the next index instead of looking for a new unique random number
+        // This should save a little bit of cpu time.
         var randomNumberAvailable = false;
         var randomNumber;
         var i = 0;
         while (!randomNumberAvailable) {
             console.log('attempt to find a random available number ' + ++i);
-            randomNumber = this.getRandomNumberBelow4();
+            randomNumber = this.getRandomNumberBelowMaxAmountOfChoices();
             randomNumberAvailable = this.isRandomNumberAvailableInQuizOptions(randomNumber);
         }
         return randomNumber;
@@ -812,8 +819,8 @@ var QuizComponent = /** @class */ (function () {
             return true;
         }
     };
-    QuizComponent.prototype.getRandomNumberBelow4 = function () {
-        var randomNumber = Math.floor(Math.random() * 4);
+    QuizComponent.prototype.getRandomNumberBelowMaxAmountOfChoices = function () {
+        var randomNumber = Math.floor(Math.random() * this.maxAmountOfChoices);
         return randomNumber;
     };
     QuizComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

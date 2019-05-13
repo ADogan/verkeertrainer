@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IQuizOption } from './quiz-option.model';
 import { TrafficSignsService } from '../services/traffic-signs.service';
-import { ITrafficSign } from "../services/traffic-sign.model";
+import { ITrafficSign } from '../services/traffic-sign.model';
 
 @Component({
   selector: 'app-quiz',
@@ -10,25 +10,34 @@ import { ITrafficSign } from "../services/traffic-sign.model";
 })
 export class QuizComponent implements OnInit {
   quizOptions: IQuizOption[];
-  quizOptionsAvailablePositions: number[] = [ 0, 1, 2, 3 ];
+  quizOptionsAvailablePositions: number[];
   currentSignImageFileName: string;
   correctSign: ITrafficSign;
   feedbackPeriod = false;
   showContinueButton = false;
-  questionNumber = 0;
-  feedbackWaitTimeInMs = 4000;
-  timeoutTimer;
+
+  // timeoutTimer should be of type number or Timer. Trouble with setting the Timer object.
+  // Not very important, so keeping it at 'any' at the moment.
+  timeoutTimer: any;
+
+  questionNumber: number;
+  feedbackWaitTimeInMs: number;
+  maxAmountOfChoices: number;
 
   /*
     Methods called from outside this class:
   */
-  constructor(private trafficSignsService: TrafficSignsService ) {}
+  constructor(private trafficSignsService: TrafficSignsService ) {
+    this.questionNumber = 0;
+    this.feedbackWaitTimeInMs = 4000;
+    this.maxAmountOfChoices = 6;
+  }
 
   ngOnInit() {
     this.newQuestion();
   }
 
-  clickedAnswer(quizOption) {
+  clickedAnswer(quizOption: IQuizOption) {
     if (!this.feedbackPeriod) {
       this.feedbackPeriod = true;
       const correct = this.checkAnswer(quizOption.code);
@@ -43,18 +52,19 @@ export class QuizComponent implements OnInit {
   */
 
   checkAnswer(clickedSignCode: string): boolean {
-    // throw new Error("Method not implemented.");
     if ( clickedSignCode === this.correctSign.code ) {
       return true;
     } else {
       return false;
     }
   }
+
   feedbackTime(quizOption: IQuizOption) {
     console.log('start feedback');
     this.showFeedback(quizOption);
     this.setTimeoutTimer();
   }
+
   nextQuestion() {
     this.newQuestion();
   }
@@ -64,7 +74,7 @@ export class QuizComponent implements OnInit {
       if (this.feedbackPeriod) {
         this.newQuestion();
       } else {
-        console.log('timer over but feedbackperiod is false, so the user must have pressed continue.')
+        console.log('timer is over but feedbackperiod is false, so the user must have pressed continue.');
       }
     }, this.feedbackWaitTimeInMs);
   }
@@ -76,12 +86,19 @@ export class QuizComponent implements OnInit {
   showFeedback(quizOption: IQuizOption) {
     this.showContinueButton = true;
     this.quizOptions.every(element => {
-      if (element.code === this.correctSign.code ) {
-        element.status = 'correct';
-      } else if (element.code === quizOption.code ) {
-        element.status = 'chosenIncorrect';
+
+      if (element.code === quizOption.code) {
+        if (element.code === this.correctSign.code) {
+          element.status = 'correct_chosen';
+        } else {
+          element.status = 'incorrect_chosen';
+        }
       } else {
-        element.status = 'incorrect';
+        if (element.code === this.correctSign.code) {
+          element.status = 'correct_not_chosen';
+        } else {
+          element.status = 'incorrect_not_chosen';
+        }
       }
       return true;
     });
@@ -93,19 +110,25 @@ export class QuizComponent implements OnInit {
     this.questionNumber++;
 
     this.resetQuizOptions();
-    this.setCorrectSignInQuizOptions();
-    this.setIncorrectOptionInQuizOptions();
-    this.setIncorrectOptionInQuizOptions();
-    this.setIncorrectOptionInQuizOptions();
-
     this.showContinueButton = false;
+
+    this.setCorrectSignInQuizOptions();
+
+    // start i with 1 because we have already set an option; the correctSign
+    for (let i = 1; i < this.maxAmountOfChoices; i++) {
+      this.setIncorrectOptionInQuizOptions();
+    }
   }
+
   resetQuizOptions() {
-    this.quizOptions = [ { code: 'XZY', description: 'XZY.', status: 'unset'
-      }, { code: 'XZY', description: 'XZY.', status: 'unset'
-      }, { code: 'XZY', description: 'XZY.', status: 'unset'
-      }, { code: 'XZY', description: 'XZY.', status: 'unset' }];
-    this.quizOptionsAvailablePositions = [ 0, 1, 2, 3 ];
+    this.quizOptions = [];
+    this.quizOptionsAvailablePositions = [];
+      for (let i = 0; i < this.maxAmountOfChoices; i++) {
+        this.quizOptionsAvailablePositions.push(i);
+
+        const quizOption: IQuizOption = { code: 'XZY' + i, description: 'XZY.' + i, status: 'unset' };
+        this.quizOptions.push(quizOption);
+      }
   }
 
   setCorrectSignInQuizOptions() {
@@ -119,18 +142,16 @@ export class QuizComponent implements OnInit {
   }
 
   setOptionInQuizOptions() {
-    // Todo, check if the sign is not already present in the options
-    var currentSign: ITrafficSign;
-    var signAlreadyPresent = true;
+    let currentSign: ITrafficSign;
+    let signAlreadyPresent = true;
 
     do {
       currentSign = this.trafficSignsService.getRandomTrafficSign();
-      //check if sign is present
       signAlreadyPresent = this.signIsAlreadyPresentAsAnOption(currentSign);
       console.log('sign not present???');
     } while (signAlreadyPresent);
 
-    const answerPosition = this.getUniqueRandomNumberBelow4();
+    const answerPosition = this.getUniqueRandomNumberBelowMaxAmountOfChoices();
     this.setSignAsOption(currentSign, answerPosition);
     return currentSign;
   }
@@ -151,9 +172,7 @@ export class QuizComponent implements OnInit {
     return false;
   }
 
-
   setSignAsOption(sign: ITrafficSign, quizoptionsIndex: number) {
-    console.log('setting to position: ' + quizoptionsIndex);
     this.quizOptions[quizoptionsIndex].description = sign.description;
     this.quizOptions[quizoptionsIndex].code = sign.code;
     this.removeFromAvailableOptionPositions(quizoptionsIndex);
@@ -165,16 +184,17 @@ export class QuizComponent implements OnInit {
     }
   }
 
-  getUniqueRandomNumberBelow4() {
+  getUniqueRandomNumberBelowMaxAmountOfChoices() {
     // make check if size of quizOptionsAvailablePositions is 1
     // if yes, then pop that as the next index instead of looking for a new unique random number
+    // This should save a little bit of cpu time.
     let randomNumberAvailable = false;
     let randomNumber: number;
     let i = 0;
 
     while (!randomNumberAvailable) {
       console.log('attempt to find a random available number ' + ++i);
-      randomNumber = this.getRandomNumberBelow4();
+      randomNumber = this.getRandomNumberBelowMaxAmountOfChoices();
       randomNumberAvailable = this.isRandomNumberAvailableInQuizOptions(randomNumber);
     }
     return randomNumber;
@@ -191,8 +211,8 @@ export class QuizComponent implements OnInit {
     }
   }
 
-   getRandomNumberBelow4() {
-    const randomNumber = Math.floor(Math.random() * 4);
+   getRandomNumberBelowMaxAmountOfChoices() {
+    const randomNumber = Math.floor(Math.random() * this.maxAmountOfChoices);
     return randomNumber;
   }
 }
