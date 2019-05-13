@@ -41,10 +41,7 @@
 }
 
 .quizOptionBox > .bg-light:hover {
-    /* color: white !important; */
-    /* background-color: #14D4F4 !important; */
     border: 1px solid black;
-    /* box-shadow: 2px 2px 8px black; */
 }
 
 .quizOptionBox > .bg-success{
@@ -54,12 +51,6 @@
     border-radius: 3px;
 }
 
-.quizOptionBox > .bg-success:hover{
-    color: #fff !important;
-    background-color: #8EE000 !important;
-    border: 1px solid #8EE000;
-    border-radius: 3px;
-}
 
 .quizOptionBox > .bg-warning{
     color: #fff !important;

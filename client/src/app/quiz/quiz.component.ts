@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IQuizOption } from './quiz-option.model';
 import { TrafficSignsService } from '../services/traffic-signs.service';
+import { ITrafficSign } from "../services/traffic-sign.model";
 
 @Component({
   selector: 'app-quiz',
@@ -11,7 +12,7 @@ export class QuizComponent implements OnInit {
   quizOptions: IQuizOption[];
   quizOptionsAvailablePositions: number[] = [ 0, 1, 2, 3 ];
   currentSignImageFileName: string;
-  correctSign;
+  correctSign: ITrafficSign;
   feedbackPeriod = false;
   showContinueButton = false;
   questionNumber = 0;
@@ -100,18 +101,17 @@ export class QuizComponent implements OnInit {
     this.showContinueButton = false;
   }
   resetQuizOptions() {
-    this.quizOptions = [ { code: 'A1', description: 'A1.', status: 'unset'
-      }, { code: 'A2', description: 'A2.', status: 'unset'
-      }, { code: 'A3', description: 'A3.', status: 'unset'
-      }, { code: 'A4', description: 'A4.', status: 'unset' }];
+    this.quizOptions = [ { code: 'XZY', description: 'XZY.', status: 'unset'
+      }, { code: 'XZY', description: 'XZY.', status: 'unset'
+      }, { code: 'XZY', description: 'XZY.', status: 'unset'
+      }, { code: 'XZY', description: 'XZY.', status: 'unset' }];
     this.quizOptionsAvailablePositions = [ 0, 1, 2, 3 ];
   }
 
   setCorrectSignInQuizOptions() {
-    const sign = this.setOptionInQuizOptions();
+    const sign: ITrafficSign = this.setOptionInQuizOptions();
     this.correctSign = sign;
     this.currentSignImageFileName = sign.image.filename;
-    console.log("correct sign is set!");
   }
 
   setIncorrectOptionInQuizOptions() {
@@ -119,13 +119,40 @@ export class QuizComponent implements OnInit {
   }
 
   setOptionInQuizOptions() {
-    const currentSign = this.trafficSignsService.getRandomTrafficSign();
+    // Todo, check if the sign is not already present in the options
+    var currentSign: ITrafficSign;
+    var signAlreadyPresent = true;
+
+    do {
+      currentSign = this.trafficSignsService.getRandomTrafficSign();
+      //check if sign is present
+      signAlreadyPresent = this.signIsAlreadyPresentAsAnOption(currentSign);
+      console.log('sign not present???');
+    } while (signAlreadyPresent);
+
     const answerPosition = this.getUniqueRandomNumberBelow4();
     this.setSignAsOption(currentSign, answerPosition);
     return currentSign;
   }
 
-  setSignAsOption(sign: any, quizoptionsIndex: number) {
+  signIsAlreadyPresentAsAnOption(sign: ITrafficSign): boolean {
+    /* Because this check compares the sign descriptions, it looks like no 2 signs with the same description can be
+    added in the list of signs. They can still be added, should not be a problem. Beause this function is returning
+    true when possibly 2 signs are found with the same description, the app will look for a new sign to present to
+    the user. The benefit of not showing 2 descriptions that are the same to the user majorly outweighs the chance
+    of showing both choices in a question (for the purpose of randomness??).
+    */
+    this.quizOptions.every( element => {
+      if (element.description === sign.description) {
+        // Sign is present
+        return true;
+      }
+    });
+    return false;
+  }
+
+
+  setSignAsOption(sign: ITrafficSign, quizoptionsIndex: number) {
     console.log('setting to position: ' + quizoptionsIndex);
     this.quizOptions[quizoptionsIndex].description = sign.description;
     this.quizOptions[quizoptionsIndex].code = sign.code;
@@ -143,7 +170,6 @@ export class QuizComponent implements OnInit {
     // if yes, then pop that as the next index instead of looking for a new unique random number
     let randomNumberAvailable = false;
     let randomNumber: number;
-    this.isRandomNumberAvailableInQuizOptions(randomNumber);
     let i = 0;
 
     while (!randomNumberAvailable) {
