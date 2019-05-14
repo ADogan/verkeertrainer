@@ -30,3 +30,4 @@ finish:
   script:
     - pwd
     - ls -all
+    - echo $FB_SECRET
