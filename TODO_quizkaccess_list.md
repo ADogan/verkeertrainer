@@ -11,7 +11,6 @@
 1. Add sound to quiz options events.
 1. Add keyboard number eventlistener for the quizoptions.
 1. Add keyboard Enter/return key eventlistener for the next question.
-1. Remove sidebar and move buttons to a top menu.
 
 ## Bugs:
 
