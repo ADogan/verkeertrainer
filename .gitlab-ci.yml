@@ -1,23 +1,18 @@
 image: node:10
 
 stages:
-  - prepare
   - build
   - test
   - deploy
 
-prepare:
-  stage: 'prepare'
+build:
+  stage: 'build'
   script:
     - apt update
     - apt install -y curl
     - apt install -y nodejs
     - npm install -y npm@latest -g
     - npm install -g @angular/cli
-
-build:
-  stage: 'build'
-  script:
     - cd /builds/ADogan/verkeertrainer/client
     - rm package-lock.json
     - npm install
