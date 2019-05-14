@@ -2,6 +2,7 @@ image: node:10
 
 stages:
   - build
+  - deploy
   - finish
 
 build:
@@ -24,6 +25,16 @@ build:
       name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
       paths:
         - /builds/ADogan/verkeertrainer/client/dist/
+
+deploy:
+  stage: 'deploy'
+  script:
+    - npm install -g firebase-tools
+    - cd /builds/ADogan/verkeertrainer/
+    - firebase -V
+    - firebase deploy --token "$FB_TKN" -P "$FB_PROJECTNAME"
+  only:
+    - master
 
 finish:
   stage: 'finish'
