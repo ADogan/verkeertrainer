@@ -13,12 +13,12 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'about', component: AboutComponent },
-    
-    { path: 'trafficSigns', component: TrafficSignsComponent },
-    { path: 'trafficSigns/quiz/new', component: QuizComponent },
-    { path: 'quizresults', component: QuizresultsComponent },
 
-    { path: '**', redirectTo: 'trafficSigns' }
+    { path: 'traffic_signs', component: TrafficSignsComponent },
+    { path: 'traffic_signs/quiz/new', component: QuizComponent },
+    { path: 'traffic_signs/quiz/results', component: QuizresultsComponent },
+
+    { path: '**', redirectTo: 'traffic_signs' }
 ];
 
 
