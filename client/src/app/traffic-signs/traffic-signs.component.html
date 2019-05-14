@@ -12,7 +12,7 @@
   <!-- Content Row -->
   <div class="row">
       <div class="card traffic-sign" style="width: 18rem;" *ngFor="let trafficSign of TrafficSigns">
-          <img class="card-img-top" src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" alt="Card image cap">
+          <img class="card-img-top" loading="lazy" src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{trafficSign.title}}</h5>
             <p class="card-text">{{trafficSign.description}}</p>
