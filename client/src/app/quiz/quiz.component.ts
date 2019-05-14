@@ -30,7 +30,7 @@ export class QuizComponent implements OnInit {
   constructor(private trafficSignsService: TrafficSignsService ) {
     this.questionNumber = 0;
     this.feedbackWaitTimeInMs = 4000;
-    this.maxAmountOfChoices = 6;
+    this.maxAmountOfChoices = 4;
   }
 
   ngOnInit() {
