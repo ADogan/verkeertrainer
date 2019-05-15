@@ -107,6 +107,7 @@ export class QuizComponent implements OnInit {
   newQuestion() {
     this.feedbackPeriod = false;
     this.clearTimeoutTimer();
+    this.correctSign = null;
     this.questionNumber++;
 
     this.resetQuizOptions();

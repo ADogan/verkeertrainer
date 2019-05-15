@@ -1,3 +1,7 @@
 .navbar-nav {
     margin: auto;
 }
+
+.logo {
+    float:left;
+}

@@ -11,6 +11,8 @@
 1. Add sound to quiz options events.
 1. Add keyboard number eventlistener for the quizoptions.
 1. Add keyboard Enter/return key eventlistener for the next question.
+1. Add end of a single quiz when all signs are done. Go to the results page with a specific quiz in view.
+1. Add GA.
 
 ## Bugs:
 
