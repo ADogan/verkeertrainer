@@ -13,6 +13,9 @@
 1. Add keyboard Enter/return key eventlistener for the next question.
 1. Add end of a single quiz when all signs are done. Go to the results page with a specific quiz in view.
 1. Add GA.
+1. Page for each sign.
+1. Search for sign info with autocomplete.
+1. Enable commenting on a specific sign.
 
 ## Bugs:
 

@@ -18,7 +18,7 @@ const routes: Routes = [
     { path: 'traffic_signs/quiz/new', component: QuizComponent },
     { path: 'traffic_signs/quiz/results', component: QuizresultsComponent },
 
-    { path: '**', redirectTo: 'traffic_signs' }
+    { path: '**', redirectTo: 'traffic_signs/quiz/new' }
 ];
 
 
