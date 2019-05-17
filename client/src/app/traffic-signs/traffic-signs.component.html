@@ -1,17 +1,14 @@
-<div class="container-fluid">
-
-  <!-- Page Heading -->
-  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Verkeersborden, {{TrafficSigns.length}} op deze pagina.</h1> 
+<div>
+  <div>
+    <h1>Verkeersborden, {{TrafficSigns.length}} op deze pagina.</h1> 
   </div>
 
-  <!-- Content Row -->
-  <div class="row">
-      <div class="card traffic-sign" style="width: 18rem;" *ngFor="let trafficSign of TrafficSigns">
-          <img class="card-img-top" loading="lazy" src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{trafficSign.title}}</h5>
-            <p class="card-text">{{trafficSign.description}}</p>
+  <div>
+      <div *ngFor="let trafficSign of TrafficSigns">
+          <img loading="lazy" src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" alt="Card image cap">
+          <div>
+            <h5>{{trafficSign.title}}</h5>
+            <p>{{trafficSign.description}}</p>
           </div>
         </div>
       </div>

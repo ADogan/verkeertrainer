@@ -22,16 +22,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "src/styles.css",
-              "src/sb-admin-2.css"
-            ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/jquery.easing/jquery.easing.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "styles": [],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -84,10 +76,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.css",
-              "src/sb-admin-2.css"
-            ],
+            "styles": [],
             "scripts": [],
             "assets": [
               "src/favicon.ico",

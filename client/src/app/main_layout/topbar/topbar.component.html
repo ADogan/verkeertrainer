@@ -1,48 +1,48 @@
-<nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
-    <div class="logo">
-      <a routerLink="/" class=" text-lg font-weight-bold">Verkeertrainer.nl</a>
+<nav>
+    <div>
+      <a routerLink="/">Verkeertrainer.nl</a>
     </div>
-  <ul class="navbar-nav">
-    <li class="nav-link">
-      <a routerLink="/home" class="btn btn-link btn-sm ">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span class="text">Dashboard</span>
+  <ul>
+    <li>
+      <a routerLink="/home">
+        <i></i>
+        <span>Dashboard</span>
       </a>
     </li>
 
-    <li class="nav-item nav-link dropdown mx-1">
-      <button class="btn btn-link dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li>
+      <button type="button" id="dropdownMenuButton">
         Verkeersborden
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-          <a class="dropdown-item" routerLink="/traffic_signs">Overzicht</a>
-          <a class="dropdown-item" routerLink="/traffic_signs/quiz/new">Quiz</a>
-          <a class="dropdown-item" routerLink="/traffic_signs/quiz/results">Resultaten</a>
+      <div>
+          <a routerLink="/traffic_signs">Overzicht</a>
+          <a routerLink="/traffic_signs/quiz/new">Quiz</a>
+          <a routerLink="/traffic_signs/quiz/results">Resultaten</a>
       </div>
     </li>
 
-    <li class="nav-item nav-link dropdown mx-1">
-      <button class="btn btn-link dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li>
+      <button type="button" id="dropdownMenuButton">
         <del>Rijbewijs B</del>
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-          <a class="dropdown-item" routerLink="/drivers_license_b/rules">Verkeersregels</a>
-          <a class="dropdown-item" routerLink="/drivers_license_b/insight">Verkeersinzicht</a>
-          <a class="dropdown-item" routerLink="/drivers_license_b/danger_recognition">Gevaarherkenning</a>
-          <a class="dropdown-item" routerLink="/drivers_license_b/practice">Oefeningen</a>
-          <a class="dropdown-item" routerLink="/drivers_license_b/practice_results">Resultaten</a>
+      <div>
+          <a routerLink="/drivers_license_b/rules">Verkeersregels</a>
+          <a routerLink="/drivers_license_b/insight">Verkeersinzicht</a>
+          <a routerLink="/drivers_license_b/danger_recognition">Gevaarherkenning</a>
+          <a routerLink="/drivers_license_b/practice">Oefeningen</a>
+          <a routerLink="/drivers_license_b/practice_results">Resultaten</a>
       </div>
     </li>
     
-    <li class="nav-link">
-      <a routerLink="/about" class="btn btn-link btn-sm ">
-          <span class="text">Over</span>
+    <li>
+      <a routerLink="/about">
+          <span>Over</span>
         </a>
     </li>
 
-    <li class="nav-item nav-link dropdown mx-1" *ngIf="currentpath != '/traffic_signs/quiz/new'">
-      <a routerLink="/traffic_signs/quiz/new" class="btn-sm btn-warning shadow-sm">
-      <i class="fas fa-traffic-light fa-sm text-white-50"></i> Start nu de borden Quiz</a>
+    <li *ngIf="currentpath != '/traffic_signs/quiz/new'">
+      <a routerLink="/traffic_signs/quiz/new">
+      Start nu de borden Quiz</a>
     </li>
   </ul>
 </nav>

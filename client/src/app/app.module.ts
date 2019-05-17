@@ -20,7 +20,6 @@ import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
 import { TopbarComponent } from './main_layout/topbar/topbar.component';
 import { FooterComponent } from './main_layout/footer/footer.component';
 import { LogoutModalComponent } from './main_layout/modals/logout-modal.component';
-import { MessagesDropdownComponent } from './main_layout/topbar/messages/messages-dropdown.component';
 import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
 
 
@@ -36,7 +35,6 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
     FooterComponent,
     LogoutModalComponent,
     QuizComponent,
-    MessagesDropdownComponent,
     QuizresultsComponent
   ],
   imports: [
