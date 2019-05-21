@@ -21,8 +21,14 @@ export class QuizComponent implements OnInit {
   timeoutTimer: any;
 
   questionNumber: number;
+  totalQuestionsThisQuiz: number;
   feedbackWaitTimeInMs: number;
   maxAmountOfChoices: number;
+
+  quizProgressColor: string;
+  quizProgressMode: string;
+  quizProgressValue: number;
+  quizProgressBufferValue: number;
 
   /*
     Methods called from outside this class:
@@ -31,10 +37,15 @@ export class QuizComponent implements OnInit {
     this.questionNumber = 0;
     this.feedbackWaitTimeInMs = 4000;
     this.maxAmountOfChoices = 4;
+    this.quizProgressColor = 'primary';
+    this.quizProgressMode = 'determinate';
+    this.quizProgressValue = 0;
+    this.quizProgressBufferValue = 0;
   }
 
   ngOnInit() {
     this.newQuestion();
+    this.totalQuestionsThisQuiz = this.trafficSignsService.getTrafficSignAmount();
   }
 
   clickedAnswer(quizOption: IQuizOption) {
@@ -50,6 +61,10 @@ export class QuizComponent implements OnInit {
   /*
     Methods only called from inside this class
   */
+
+  updateProgressBar() {
+    this.quizProgressValue = this.questionNumber;
+  }
 
   checkAnswer(clickedSignCode: string): boolean {
     if ( clickedSignCode === this.correctSign.code ) {
@@ -105,6 +120,7 @@ export class QuizComponent implements OnInit {
   }
 
   newQuestion() {
+    this.updateProgressBar();
     this.feedbackPeriod = false;
     this.clearTimeoutTimer();
     this.correctSign = null;

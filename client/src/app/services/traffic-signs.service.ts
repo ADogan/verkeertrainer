@@ -9,7 +9,7 @@ export class TrafficSignsService {
     getTrafficSignsImagesUrlBase() {
         return this.images_url_base;
     }
-    getTrafficSigns() {
+    getTrafficSigns(): ITrafficSign[] {
         return TRAFFIC_SIGNS;
     }
 
@@ -21,6 +21,10 @@ export class TrafficSignsService {
         const random_number = Math.floor(Math.random() * (TRAFFIC_SIGNS.length));
         console.log(random_number);
         return TRAFFIC_SIGNS[random_number];
+    }
+
+    getTrafficSignAmount(): number {
+        return TRAFFIC_SIGNS.length;
     }
 }
 

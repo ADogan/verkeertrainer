@@ -1,16 +1,22 @@
 <div>
-  <div>
-    <h1>Verkeersborden, {{TrafficSigns.length}} op deze pagina.</h1> 
-  </div>
-
-  <div>
-      <div *ngFor="let trafficSign of TrafficSigns">
-          <img loading="lazy" src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" alt="Card image cap">
-          <div>
-            <h5>{{trafficSign.title}}</h5>
-            <p>{{trafficSign.description}}</p>
-          </div>
-        </div>
-      </div>
-  <p>Source: {{signsSourceUrl}}.</p>
+  <h1>Verkeersborden, {{TrafficSigns.length}} op deze pagina.</h1> 
 </div>
+<div class="trafficSignsContainer">
+  <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns">
+    <img mat-card-image src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" 
+      loading="lazy"
+      alt="Card image cap">
+    <mat-card-title>{{trafficSign.title}}</mat-card-title>
+    <mat-card-content>{{trafficSign.description}}</mat-card-content>
+  </mat-card>
+</div>
+<p>Source: {{signsSourceUrl}}.</p>
+
+<!--
+    <mat-card-title>	Card title
+    <mat-card-subtitle>	Card subtitle
+    <mat-card-content>	Primary card content. Intended for blocks of text
+    <img mat-card-image>	Card image. Stretches the image to the container width
+    <mat-card-actions>	Container for buttons at the bottom of the card
+    <mat-card-footer>	Section anchored to the bottom of the card 
+-->

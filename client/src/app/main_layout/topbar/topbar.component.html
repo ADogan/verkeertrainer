@@ -1,48 +1,39 @@
-<nav>
-    <div>
-      <a routerLink="/">Verkeertrainer.nl</a>
-    </div>
-  <ul>
-    <li>
-      <a routerLink="/home">
-        <i></i>
+<mat-toolbar class="topbar">
+  <mat-toolbar-row>
+    <span><button mat-button routerLink="/" class="logo">Verkeertrainer.nl</button></span>
+    <span class="topbarMenuItems">
+      <button mat-button routerLink="/home">
         <span>Dashboard</span>
-      </a>
-    </li>
-
-    <li>
-      <button type="button" id="dropdownMenuButton">
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuVerkeersBorden" id="dropdownMenuButton">
         Verkeersborden
       </button>
-      <div>
-          <a routerLink="/traffic_signs">Overzicht</a>
-          <a routerLink="/traffic_signs/quiz/new">Quiz</a>
-          <a routerLink="/traffic_signs/quiz/results">Resultaten</a>
-      </div>
-    </li>
-
-    <li>
-      <button type="button" id="dropdownMenuButton">
+    
+      <mat-menu #menuVerkeersBorden="matMenu">
+          <button mat-menu-item routerLink="/traffic_signs">Overzicht</button>
+          <button mat-menu-item routerLink="/traffic_signs/quiz/new">Quiz</button>
+          <button mat-menu-item routerLink="/traffic_signs/quiz/results">Resultaten</button>
+      </mat-menu>
+      
+      <button mat-button [matMenuTriggerFor]="menuRijbewijsB" id="dropdownMenuButton">
         <del>Rijbewijs B</del>
       </button>
-      <div>
-          <a routerLink="/drivers_license_b/rules">Verkeersregels</a>
-          <a routerLink="/drivers_license_b/insight">Verkeersinzicht</a>
-          <a routerLink="/drivers_license_b/danger_recognition">Gevaarherkenning</a>
-          <a routerLink="/drivers_license_b/practice">Oefeningen</a>
-          <a routerLink="/drivers_license_b/practice_results">Resultaten</a>
-      </div>
-    </li>
+      <mat-menu #menuRijbewijsB="matMenu">
+          <button mat-menu-item routerLink="/drivers_license_b/rules">Verkeersregels</button>
+          <button mat-menu-item routerLink="/drivers_license_b/insight">Verkeersinzicht</button>
+          <button mat-menu-item routerLink="/drivers_license_b/danger_recognition">Gevaarherkenning</button>
+          <button mat-menu-item routerLink="/drivers_license_b/practice">Oefeningen</button>
+          <button mat-menu-item routerLink="/drivers_license_b/practice_results">Resultaten</button>
+      </mat-menu>
     
-    <li>
-      <a routerLink="/about">
+      <button mat-button routerLink="/about">
           <span>Over</span>
-        </a>
-    </li>
+      </button>
 
-    <li *ngIf="currentpath != '/traffic_signs/quiz/new'">
-      <a routerLink="/traffic_signs/quiz/new">
-      Start nu de borden Quiz</a>
-    </li>
-  </ul>
-</nav>
+    </span>
+
+    <button mat-button routerLink="/traffic_signs/quiz/new" *ngIf="currentpath != '/traffic_signs/quiz/new'">
+      Start nu de borden Quiz
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

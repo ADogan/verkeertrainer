@@ -1,8 +1,15 @@
-footer {
-    bottom: 0px;
-    height: 10px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    clear: both;
+  .footerNavBar, .footer {
+    background-color:#717171 !important;
   }
+
+  .footerNavBar * {
+    margin: auto;
+    color:white;
+    margin-top:auto;
+    bottom:0px;
+  }
+
+.footer {
+  padding-top:50px;
+  /* height: 200px; */
+}

@@ -5,6 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
+// Material.angular
+import { MaterialModule } from './material-module';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+
+
 // Services
 import { TrafficSignsService } from './services/traffic-signs.service';
 
@@ -39,8 +44,11 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    NoopAnimationsModule
   ],
+  // entryComponents: [ToolbarMultirowExample],
   providers: [TrafficSignsService],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,23 @@
-.navbar-nav {
-    margin: auto;
+.topbar {
+    top:0px !important;
+    left: 0;
+    right: 0;
+    position: absolute;
+    color:rgb(75, 75, 75);
+    background-color:white;
+    /* text-align: center; */
+    /* align-content: center; */
+}
+
+.topbarMenuItems > *:hover {
+    color:black;
 }
 
 .logo {
     float:left;
+    position: relative;
+    border:1px solid black;
+    border-radius: 20px;
+    color:black;
+    background-color:white;
 }
