@@ -1,0 +1,17 @@
+.quizResultTable {
+    max-width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.emptyQuizzesCard {
+    margin:25px;
+    /* width:200px; */
+}
+
+.mat-column-id {
+    width:10px;
+}
+
+.mat-column-startDate {
+    width:300px;
+}

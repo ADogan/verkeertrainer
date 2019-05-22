@@ -1,23 +1,8 @@
-<!-- <mat-card id="quizProgress">
-    <mat-card-content>
-        <h2>Vraag {{questionNumber}} van totaal {{totalQuestionsThisQuiz}} vragen.</h2>
-
-        <section class="quizProgressSection">
-        <mat-progress-bar
-            class="quizProgressBar"
-            [color]="quizProgressColor"
-            [mode]="quizProgressMode"
-            [value]="quizProgressValue"
-            [bufferValue]="quizProgressBufferValue">
-        </mat-progress-bar>
-        </section>
-    </mat-card-content>
-</mat-card> -->
-<h1>Quiz</h1>
+<h1>Verkeersborden Quiz</h1>
 <div class="quizCardWrapper">
     <mat-card class="quiz-card">
         <mat-card-header>
-            <mat-card-title>Verkeersborden Quiz; Vraag nummer: {{questionNumber}} van de {{totalQuestionsThisQuiz}}.</mat-card-title>
+            <mat-card-title>Vraag nummer: {{questionNumber}} van de {{totalQuestionsThisQuiz}}.</mat-card-title>
         </mat-card-header>
             <img mat-card-image class="currentSignImage" src="assets/img/traffic_signs/{{currentSignImageFileName}}.png" alt="">
         <mat-card-content>

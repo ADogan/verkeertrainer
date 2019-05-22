@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IQuizOption } from '../models/quiz-option.model';
 import { TrafficSignsService } from '../services/traffic-signs.service';
 import { ITrafficSign } from '../models/traffic-sign.model';
+import { QuizService } from '../services/quiz.service';
 
 @Component({
   selector: 'app-quiz',
@@ -15,6 +16,7 @@ export class QuizComponent implements OnInit {
   correctSign: ITrafficSign;
   feedbackPeriod = false;
   showContinueButton = false;
+  currentQuizId: number;
 
   // timeoutTimer should be of type number or Timer. Trouble with setting the Timer object.
   // Not very important, so keeping it at 'any' at the moment.
@@ -33,7 +35,8 @@ export class QuizComponent implements OnInit {
   /*
     Methods called from outside this class:
   */
-  constructor(private trafficSignsService: TrafficSignsService ) {
+  constructor(private trafficSignsService: TrafficSignsService,
+      private quizService: QuizService ) {
     this.questionNumber = 0;
     this.feedbackWaitTimeInMs = 4000;
     this.maxAmountOfChoices = 4;
@@ -44,7 +47,7 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.newQuestion();
+    this.newQuiz();
     this.totalQuestionsThisQuiz = this.trafficSignsService.getTrafficSignAmount();
   }
 
@@ -52,10 +55,14 @@ export class QuizComponent implements OnInit {
     if (!this.feedbackPeriod) {
       this.feedbackPeriod = true;
       const correct = this.checkAnswer(quizOption.code);
+      this.updateQuiz(correct);
       this.feedbackTime(quizOption);
     } else {
       console.log(this.feedbackPeriod);
     }
+  }
+  updateQuiz(correct: boolean) {
+    this.quizService.updateQuizWithAnswer(this.currentQuizId, this.correctSign.code, correct, new Date(Date.now()));
   }
 
   /*
@@ -78,6 +85,11 @@ export class QuizComponent implements OnInit {
     console.log('start feedback');
     this.showFeedback(quizOption);
     this.setTimeoutTimer();
+  }
+
+  newQuiz() {
+    this.currentQuizId = this.quizService.newQuiz(new Date(Date.now()));
+    this.newQuestion();
   }
 
   nextQuestion() {

@@ -11,6 +11,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 // Services
 import { TrafficSignsService } from './services/traffic-signs.service';
+import { QuizService } from './services/quiz.service';
 
 // Pages
 import { HomeComponent } from './home/home.component';
@@ -41,8 +42,8 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
     MaterialModule,
     NoopAnimationsModule
   ],
-  // entryComponents: [ToolbarMultirowExample],
-  providers: [TrafficSignsService],
+  providers: [TrafficSignsService, 
+    QuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
