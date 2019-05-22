@@ -1,5 +1,9 @@
- .quiz-card {
-     margin-top: 100px;
+.quizCardWrapper {
+   margin:auto;
+   width:100%;
+}
+.quiz-card {
+     /* margin-top: 100px; */
      clear:both;
      max-width: 35rem;
      margin-left:auto;
@@ -21,6 +25,12 @@
     margin:5px;
     display:inline;
     /* background-color:blue !important; */
+ }
+
+ @media screen and (max-width: 600px) {
+    .quizOptionCard, .quizOptionButton {
+      width:100% !important;
+   }
  }
 
  .quizOptionButton {
@@ -90,7 +100,7 @@
 
  .currentSignImage {
     /* margin:auto; */
-   /* max-width:20rem; */
+   max-width:20rem;
 }
 
 .quizProgress {

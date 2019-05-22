@@ -1,10 +1,10 @@
 
 <div class="content">
-  <app-topbar></app-topbar>
+  <div class="topBar">
+    <app-topbar></app-topbar>
+  </div>
   <div class="main">
-  <router-outlet></router-outlet>
+    <router-outlet class="wrapper"></router-outlet>
+  </div>
 </div>
-</div>
-<footer class="footer">
-  <app-footer></app-footer>
-</footer>
+  <app-footer class="footer"></app-footer>

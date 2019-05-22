@@ -1,10 +1,7 @@
-<mat-toolbar class="topbar">
+<mat-toolbar>
   <mat-toolbar-row>
-    <span><button mat-button routerLink="/" class="logo">Verkeertrainer.nl</button></span>
+    <span><button mat-button routerLink="/" class="logo"><span class="logoIcon">V</span><span class="logoText">Verkeertrainer.nl</span></button></span>
     <span class="topbarMenuItems">
-      <button mat-button routerLink="/home">
-        <span>Dashboard</span>
-      </button>
       <button mat-button [matMenuTriggerFor]="menuVerkeersBorden" id="dropdownMenuButton">
         Verkeersborden
       </button>
@@ -29,11 +26,10 @@
       <button mat-button routerLink="/about">
           <span>Over</span>
       </button>
-
     </span>
 
-    <button mat-button routerLink="/traffic_signs/quiz/new" *ngIf="currentpath != '/traffic_signs/quiz/new'">
-      Start nu de borden Quiz
+    <button mat-button class="signQuizButton" routerLink="/traffic_signs/quiz/new" *ngIf="currentpath != '/traffic_signs/quiz/new'">
+      Start bordenquiz
     </button>
   </mat-toolbar-row>
 </mat-toolbar>

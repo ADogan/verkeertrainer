@@ -13,31 +13,33 @@
         </section>
     </mat-card-content>
 </mat-card> -->
-
-<mat-card class="quiz-card">
-    <mat-card-header>
-        <mat-card-title>Verkeersborden Quiz; Vraag nummer: {{questionNumber}} van de {{totalQuestionsThisQuiz}}.</mat-card-title>
-    </mat-card-header>
-        <img mat-card-image class="currentSignImage" src="assets/img/traffic_signs/{{currentSignImageFileName}}.png" alt="">
-    <mat-card-content>
-        <p>Wat is de beschrijving van dit verkeersbord?</p>
-    <div class="quizOptionsWrapper">
-        <div *ngFor="let quizOption of quizOptions; let i=index" class="quizOptionCard">
-            <button (click)="clickedAnswer(quizOption)" class="quizOptionButton" mat-raised-button
-                    [ngClass]="{'unset': quizOption.status === 'unset',
-                        'correct_chosen': quizOption.status === 'correct_chosen',
-                        'correct_not_chosen': quizOption.status === 'correct_not_chosen',
-                        'incorrect_chosen': quizOption.status === 'incorrect_chosen',
-                        'incorrect_not_chosen': quizOption.status === 'incorrect_not_chosen'}" >
-                    <span class="buttonIcon">{{i + 1}}</span>
-                        {{quizOption.description}}
-            </button>
+<h1>Quiz</h1>
+<div class="quizCardWrapper">
+    <mat-card class="quiz-card">
+        <mat-card-header>
+            <mat-card-title>Verkeersborden Quiz; Vraag nummer: {{questionNumber}} van de {{totalQuestionsThisQuiz}}.</mat-card-title>
+        </mat-card-header>
+            <img mat-card-image class="currentSignImage" src="assets/img/traffic_signs/{{currentSignImageFileName}}.png" alt="">
+        <mat-card-content>
+            <p>Wat is de beschrijving van dit verkeersbord?</p>
+        <div class="quizOptionsWrapper">
+            <div *ngFor="let quizOption of quizOptions; let i=index" class="quizOptionCard">
+                <button (click)="clickedAnswer(quizOption)" class="quizOptionButton" mat-raised-button
+                        [ngClass]="{'unset': quizOption.status === 'unset',
+                            'correct_chosen': quizOption.status === 'correct_chosen',
+                            'correct_not_chosen': quizOption.status === 'correct_not_chosen',
+                            'incorrect_chosen': quizOption.status === 'incorrect_chosen',
+                            'incorrect_not_chosen': quizOption.status === 'incorrect_not_chosen'}" >
+                        <span class="buttonIcon">{{i + 1}}</span>
+                            {{quizOption.description}}
+                </button>
+            </div>
         </div>
-    </div>
 
-        <button mat-button
-            *ngIf="showContinueButton" 
-            (click)="nextQuestion()">Volgende
-        </button>
-    </mat-card-content>
-</mat-card>
+            <button mat-button
+                *ngIf="showContinueButton" 
+                (click)="nextQuestion()">Volgende
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>

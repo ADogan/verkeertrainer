@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ITrafficSign } from './traffic-sign.model';
+import { ITrafficSign } from '../models/traffic-sign.model';
 
 @Injectable()
 export class TrafficSignsService {

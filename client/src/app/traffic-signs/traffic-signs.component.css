@@ -1,26 +1,53 @@
-.traffic-sign:hover { 
+.trafficSign:hover { 
     cursor:pointer;
+    color:black;
+    background-color:#fefefe;
 }
-
 
 .trafficSign {
-    max-width: 300px;
-    min-height:360px;
+    width: 300px;
     /* height:400px; */
-    margin:15px;
-    /* float:left;
-    clear:right; */
-    display: inline-block;
+    margin:30px;
+    left:25px;
+    /* float:left; */
+    /* margin-left:auto; */
+    /* margin-right:auto; */
+}
+.trafficSignsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.trafficSignsContainer {
-    margin-left:auto;
-    margin-right:auto;
-    max-width:1400px;
-    /* column-count: 3; */
-    /* column-gap: 2%;
-    column-width: 31%;
-    column-span: none; */
-    /* flex-wrap: no-wrap; */
 
+.trafficSign .mat-card-content{
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 790px) {
+    .trafficSign{
+        width:100%;
+        height:auto;
+        margin-left:0px;
+        margin-right:0px;
+        left:0px;
+    }
+    .trafficSign .mat-card-content{
+        font-size:24px;
+    }
+
+    /* .trafficSign .mat-card-image {
+        max-width:100% !important;
+    } */
+}
+
+/* @media screen and (min-width: 800px) {
+    .trafficSignsContainer {
+        background-color: lightgreen;
+    }
+} */
+
+.sourceText {
+    clear: both;
 }

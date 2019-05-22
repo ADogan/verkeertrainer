@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TrafficSignsService } from '../services/traffic-signs.service';
-import { ITrafficSign } from '../services/traffic-sign.model';
+import { ITrafficSign } from '../models/traffic-sign.model';
 
 @Component({  templateUrl: './traffic-signs.component.html',
 styleUrls: ['./traffic-signs.component.css' ]})

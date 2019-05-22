@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { TrafficSignsService } from "./traffic-signs.service";
-import { ITrafficSign } from './traffic-sign.model';
+import { Injectable, OnInit } from '@angular/core';
+import { TrafficSignsService } from './traffic-signs.service';
+import { ITrafficSign } from '../models/traffic-sign.model';
 
 @Injectable()
-export class QuizService {
+export class QuizService implements OnInit {
     constructor(private trafficSignsService: TrafficSignsService) {}
         all_traffic_signs: ITrafficSign[] ;
     ngOnInit(){

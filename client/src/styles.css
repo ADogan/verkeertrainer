@@ -8,5 +8,12 @@ html, body {
   }
   
   body {
-    background-color: #fdfdfd;
+    background-color: #fafafa;
   }
+
+
+.ng-star-inserted {
+  padding:0px;
+  width:100%;
+  height:100%;
+}

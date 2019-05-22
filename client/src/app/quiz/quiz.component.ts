@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuizOption } from './quiz-option.model';
+import { IQuizOption } from '../models/quiz-option.model';
 import { TrafficSignsService } from '../services/traffic-signs.service';
-import { ITrafficSign } from '../services/traffic-sign.model';
+import { ITrafficSign } from '../models/traffic-sign.model';
 
 @Component({
   selector: 'app-quiz',
