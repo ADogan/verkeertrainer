@@ -1,3 +1,7 @@
+.topbarMenuItems {
+  align-content: right;
+}
+
 .topbarMenuItems > *:hover {
     color:black;
 }

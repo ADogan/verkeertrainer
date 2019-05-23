@@ -22,7 +22,7 @@
         </div>
 
             <button mat-button
-                *ngIf="showContinueButton" 
+            [disabled]="!showContinueButton" 
                 (click)="nextQuestion()">Volgende
             </button>
         </mat-card-content>
