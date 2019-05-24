@@ -6,7 +6,8 @@
     <mat-card class="emptyQuizzesCard">
         <mat-card-content>
       Aantal afgenomen testen: {{quizzes.length}}. <br /><br />
-      Grafiekjes komen er aan. Work in Progress :).
+
+      <button mat-menu-item routerLink="/traffic_signs/quiz/results">Bekijk Resultaten</button>
     </mat-card-content>
 
     <mat-card-actions>
@@ -17,19 +18,18 @@
     </mat-card>
     </div>
 
-    
 
 
 
 <div *ngIf="quizzes.length === 0">
     <mat-card class="emptyQuizzesCard">
       <mat-card-content>
-        U heeft geen quiz afgenomen. Ga erhaan om meteen te beginnen. Registratie niet nodig.
+        U heeft geen quiz afgenomen.
       </mat-card-content>
   
       <mat-card-actions>
         <button mat-button class="signQuizButton" routerLink="/traffic_signs/quiz/new" >
-          Start bordenquiz
+          Start bordenquiz. Registratie niet nodig.
         </button>
       </mat-card-actions>
     </mat-card>
