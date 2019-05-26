@@ -3,14 +3,12 @@
    width:100%;
 }
 .quiz-card {
-     /* margin-top: 100px; */
      clear:both;
      max-width: 35rem;
      margin-left:auto;
      margin-right:auto;
      overflow: hidden;
      margin-bottom:100px;
-     /* background-color:green; */
      text-align: center;
      align-content: center;
  }
@@ -24,7 +22,6 @@
 .quizOptionCard {
     margin:5px;
     display:inline;
-    /* background-color:blue !important; */
  }
 
  @media screen and (max-width: 600px) {
@@ -34,26 +31,30 @@
  }
 
  .quizOptionButton {
-     white-space: pre-wrap;
-     line-height: 2em;
-     
-     min-height:100px;
-     width:45%;
-     margin-bottom:10px;
-     margin-right:10px;
-     margin-left:auto;
-     clear:right;
-    vertical-align: text-top;
-    padding:10px;
+   white-space: pre-wrap;
+   line-height: 2em;
+   min-height:100px;
+   width:45%;
+   margin-bottom:10px;
+   margin-right:10px;
+   margin-left:auto;
+   font-size:1.3em;
+   color:#2b2b2b !important;
+   vertical-align: text-top;
+   padding:10px;
  }
 
  .quizOptionButton:hover {
-    /* background-color:lightgray !important; */
-    box-shadow: none !important;
+    color:#000000 !important;
  }
 
  .quizOptionButton:active {
     box-shadow: none !important;
+    background-color:white;
+ }
+ 
+ .quizContinueButton {
+   font-size:1.2em;
  }
 
  .quizOptionButton .buttonIcon {
@@ -64,12 +65,12 @@
  }
 
  .quizOptionCard .unset {
-    background-color:#F0F0F0;
+   background-color:white;
     color:rgb(30,30,30);
  }
 
  .quizOptionCard .correct_chosen {
-    background-color:#8EE000;
+    background-color:#8EE000 !important;;
     color:white;
  }
 
@@ -79,27 +80,21 @@
  }
 
  .quizOptionCard .correct_not_chosen {
-    background-color:#FF9400;
+    background-color:#FF9400 !important;;
     color:white;
  }
 
  .quizOptionCard .incorrect_chosen {
-    background-color:#E53B3B;
+    background-color:#E53B3B !important;;
     color:white;
  }
 
  .quizOptionCard .incorrect_not_chosen {
-    background-color:#777777;
+    background-color:#777777 !important;;
     color:white;
  }
 
-
-
-
-
-
  .currentSignImage {
-    /* margin:auto; */
    max-width:20rem;
 }
 
