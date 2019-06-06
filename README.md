@@ -1,6 +1,11 @@
 # Verkeertrainer
-## For quiz, data and service
+This is the main folder for the Verkeertrainer front end application, data and backend(if needed).
 
+
+
+# TO-DO list:
+
+## For quiz, data and service
 1. Ask all the signs in the list ones.
 1. Keep a result list of every taken quiz.
 1. Present taken quiz results in a tables.
@@ -12,11 +17,9 @@
 1. Add keyboard number eventlistener for the quizoptions.
 1. Add keyboard Enter/return key eventlistener for the next question.
 1. Add end of a single quiz when all signs are done. Go to the results page with a specific quiz in view.
-1. Add GA.
 1. Page for each sign.
 1. Search for sign info with autocomplete.
 1. Enable commenting on a specific sign.
 
 ## Bugs:
-
 1. Quizoptions are not always unique.
