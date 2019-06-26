@@ -9,12 +9,19 @@ export class TrafficSignsComponent {
     TrafficSigns: ITrafficSign[];
     trafficSignImageUrlBase: string;
     signsSourceUrl: string;
-
+    learnModel: boolean = false;
+    
     ngOnInit() {
         this.trafficSignImageUrlBase = this.trafficSignsService.getTrafficSignsImagesUrlBase();
         this.signsSourceUrl = this.trafficSignsService.getTrafficSignsSourceUrl();
 
         const response = this.trafficSignsService.getTrafficSigns();
         this.TrafficSigns = response;
+    }
+    signClicked(sign_description) {
+        if(this.learnModel){
+            alert(sign_description);
+            console.log(sign_description);
+        }
     }
 }

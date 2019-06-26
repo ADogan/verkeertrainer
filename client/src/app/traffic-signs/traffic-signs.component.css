@@ -39,7 +39,17 @@
 }
 
 .sourceText {
-    clear: both;
     font-size:0.5em;
     text-align:center;
+}
+
+.oefenmodus { 
+    position: relative;
+}
+
+.settings_card{
+    text-align: center;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }

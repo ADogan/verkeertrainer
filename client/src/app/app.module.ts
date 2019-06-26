@@ -1,7 +1,7 @@
 // Framework modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material.angular
 import { MaterialModule } from './material-module';
-import {MatIconModule} from '@angular/material/icon';
+// import {MatIconModule} from '@angular/material/icon';
 
 // Services
 import { TrafficSignsService } from './services/traffic-signs.service';
@@ -42,7 +42,8 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    MatIconModule,
+    FormsModule,
+    // MatIconModule,
     BrowserAnimationsModule,
   ],
   providers: [TrafficSignsService,
