@@ -23,10 +23,12 @@
     Verwijdermodus
   </mat-slide-toggle>
 
+
+  <button mat-button (click)="reset_signs()">Reset borden</button>
 </mat-card>
 
 <div class="trafficSignsContainer">
-  <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns" (click)="signClicked(trafficSign.description, trafficSign)">
+  <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns" (click)="signClicked(trafficSign.description, trafficSign, element)">
     <img mat-card-image src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" 
       loading="lazy"
       alt="Categorie: {{trafficSign.category}}">

@@ -13,23 +13,24 @@ export class TrafficSignsComponent {
     remove_model:boolean = false;
     
     ngOnInit() {
+        this.initializeSigns();
+    }
+
+    initializeSigns() {
         this.trafficSignImageUrlBase = this.trafficSignsService.getTrafficSignsImagesUrlBase();
         this.signsSourceUrl = this.trafficSignsService.getTrafficSignsSourceUrl();
 
         const response = this.trafficSignsService.getTrafficSigns();
-        this.TrafficSigns = response;
+        this.TrafficSigns = Object.assign([], response);
     }
 
-    signClicked(sign_description, element) {
+    signClicked(sign_description, sign) {
         if(this.learn_model){
             alert(sign_description);
-            console.log(sign_description);
         } else if(this.remove_model) {
-            this.TrafficSigns.splice(this.TrafficSigns.indexOf(element), 1);
-            console.log(element)
-            console.log(this.TrafficSigns.length);
+            this.TrafficSigns.splice(this.TrafficSigns.indexOf(sign), 1);
         } else {
-            console.log("Just a click on:" + element);
+            console.log("Just a click on:" + sign);
         }
     }
 
@@ -43,5 +44,10 @@ export class TrafficSignsComponent {
         if(this.remove_model === false){
             this.learn_model = false;
         }
+    }
+
+    reset_signs() {
+        this.TrafficSigns = null;
+        this.initializeSigns();
     }
 }
