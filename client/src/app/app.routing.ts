@@ -14,7 +14,8 @@ const routes: Routes = [
     { path: 'traffic_signs/quiz/new', component: QuizComponent },
     { path: 'traffic_signs/quiz/results', component: QuizresultsComponent },
 
-    { path: '**', redirectTo: 'home', pathMatch: 'full' }
+    { path: '', redirectTo: 'traffic_signs/quiz/new', pathMatch: 'full' }
+    // { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 

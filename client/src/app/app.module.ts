@@ -5,9 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 // Material.angular
 import { MaterialModule } from './material-module';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 // Services
 import { TrafficSignsService } from './services/traffic-signs.service';
@@ -40,9 +42,10 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    NoopAnimationsModule
+    MatIconModule,
+    BrowserAnimationsModule,
   ],
-  providers: [TrafficSignsService, 
+  providers: [TrafficSignsService,
     QuizService],
   bootstrap: [AppComponent]
 })

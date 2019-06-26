@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 import { ITrafficSign } from '../models/traffic-sign.model';
+import { Injectable } from "@angular/core";
 
 @Injectable()
 export class TrafficSignsService {
@@ -9,6 +10,7 @@ export class TrafficSignsService {
     getTrafficSignsImagesUrlBase() {
         return this.images_url_base;
     }
+
     getTrafficSigns(): ITrafficSign[] {
         return TRAFFIC_SIGNS;
     }

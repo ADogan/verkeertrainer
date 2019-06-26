@@ -1,17 +1,37 @@
+.pagewrapper {
+    background-image: url("/assets/wallpapers/banner-1183382_1920.jpg");
+    padding:40px;
+    min-height:400px;
+}
+
 .quizResultTable {
     max-width:90%;
+    padding:20px;
     margin-left:auto;
     margin-right:auto;
 }
 .emptyQuizzesCard {
     margin:25px;
     /* width:200px; */
+    text-align: center;
 }
 
 .mat-column-id {
     width:10px;
 }
 
+.mat-column-correct {
+    width:10px;
+}
+
+.mat-column-incorrect {
+    width:10px;
+}
+
+.mat-column-finished {
+    width:10px;
+}
+
 .mat-column-startDate {
-    width:300px;
+    width:100px;
 }

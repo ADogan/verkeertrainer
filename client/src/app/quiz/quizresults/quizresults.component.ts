@@ -9,7 +9,7 @@ import { MatTableDataSource, MatSort } from '@angular/material';
   styleUrls: ['./quizresults.component.css']
 })
 export class QuizresultsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'startDate', 'correct', 'incorrect', 'finished'];
+  displayedColumns: string[] = ['id', 'correct', 'incorrect', 'finished','startDate'];
   quizzes: IQuiz[];
   dataSource: MatTableDataSource<IQuiz>;
   @ViewChild(MatSort) sort: MatSort;

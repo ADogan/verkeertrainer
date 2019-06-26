@@ -1,6 +1,52 @@
+
 .pageWrapper {
-    text-align: center;
-    /* margin-left:auto; */
-    /* margin-right:auto; */
-    /* width:100%; */
+  background-image: url("/assets/wallpapers/dsc-2296-32.jpg");
 }
+
+#borderQuizInfoCards {
+    padding:20px;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.quizzesCard {
+    padding-top:40px;
+    padding-bottom:40px;
+    width:auto;
+}
+
+.result_button {
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .pageWrapper {
+        background-image: url("/assets/wallpapers/dsc-2296-32_medium.jpg");
+    }
+
+    .quizzesCard {
+        padding:10px;
+    }
+  }
+
+@media only screen and (max-width: 300px) {
+    .pageWrapper {
+        background-image: url("/assets/wallpapers/dsc-2296-32_small.jpg");
+    }
+
+    .pageWrapper *, #borderQuizInfoCards {
+        font-size:1em;
+        margin:0px;
+        padding:0px;
+    }
+
+    .quizzesCard {
+        padding:0px;
+    }
+}
+
+  .small_text_note {
+      font-size:0.5em;
+      vertical-align: 10px;
+  }

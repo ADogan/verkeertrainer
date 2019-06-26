@@ -1,0 +1,11 @@
+.pagewrapper {
+    background-image: url("/assets/wallpapers/banner-1183382_1920.jpg");
+    padding:40px;
+}
+
+.page_content {
+    padding:20px;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+}

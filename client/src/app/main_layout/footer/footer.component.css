@@ -14,3 +14,14 @@
   padding-bottom:75px;
   /* height: 200px; */
 }
+
+.cookie_text {
+  font-size:0.7em;
+  clear:both;
+  vertical-align: 0px;
+  text-align: center;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
