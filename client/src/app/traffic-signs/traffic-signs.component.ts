@@ -9,7 +9,8 @@ export class TrafficSignsComponent {
     TrafficSigns: ITrafficSign[];
     trafficSignImageUrlBase: string;
     signsSourceUrl: string;
-    learnModel: boolean = false;
+    learn_model: boolean = false;
+    remove_model:boolean = false;
     
     ngOnInit() {
         this.trafficSignImageUrlBase = this.trafficSignsService.getTrafficSignsImagesUrlBase();
@@ -18,10 +19,29 @@ export class TrafficSignsComponent {
         const response = this.trafficSignsService.getTrafficSigns();
         this.TrafficSigns = response;
     }
-    signClicked(sign_description) {
-        if(this.learnModel){
+
+    signClicked(sign_description, element) {
+        if(this.learn_model){
             alert(sign_description);
             console.log(sign_description);
+        } else if(this.remove_model) {
+            this.TrafficSigns.splice(this.TrafficSigns.indexOf(element), 1);
+            console.log(element)
+            console.log(this.TrafficSigns.length);
+        } else {
+            console.log("Just a click on:" + element);
+        }
+    }
+
+    clicked_practice_mode() {
+        if(this.learn_model === false){
+            this.remove_model = false;
+        }
+    }
+
+    clicked_remove_mode() {
+        if(this.remove_model === false){
+            this.learn_model = false;
         }
     }
 }

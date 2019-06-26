@@ -6,21 +6,31 @@
 
 <mat-card class="settings_card">
 
-  <mat-slide-toggle #toggle
-  [(ngModel)]="learnModel"
+  <mat-slide-toggle
+  [(ngModel)]="learn_model"
     class="oefenmodus"
-    color="secondary"
-    >
+    (click)="clicked_practice_mode()"
+    color="secondary">
     Oefenmodus
   </mat-slide-toggle>
+
+
+  <mat-slide-toggle
+  [(ngModel)]="remove_model"
+    class="remove_modus"
+    (click)="clicked_remove_mode()"
+    color="secondary">
+    Verwijder modus
+  </mat-slide-toggle>
+
 </mat-card>
 
 <div class="trafficSignsContainer">
-  <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns" (click)="signClicked(trafficSign.description)">
+  <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns" (click)="signClicked(trafficSign.description, trafficSign)">
     <img mat-card-image src="{{trafficSignImageUrlBase + trafficSign.image.filename + '.png'}}" 
       loading="lazy"
       alt="Categorie: {{trafficSign.category}}">
-    <span *ngIf="learnModel === false">
+    <span *ngIf="learn_model === false">
       <mat-card-content>
         {{trafficSign.description}}
       </mat-card-content>
