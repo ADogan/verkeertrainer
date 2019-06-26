@@ -8,7 +8,7 @@
 
   <mat-slide-toggle
   [(ngModel)]="learn_model"
-    class="oefenmodus"
+    class="oefen_modus"
     (click)="clicked_practice_mode()"
     color="secondary">
     Oefenmodus
@@ -19,8 +19,8 @@
   [(ngModel)]="remove_model"
     class="remove_modus"
     (click)="clicked_remove_mode()"
-    color="secondary">
-    Verwijder modus
+    color="error">
+    Verwijdermodus
   </mat-slide-toggle>
 
 </mat-card>

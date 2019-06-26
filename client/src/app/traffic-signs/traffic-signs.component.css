@@ -43,8 +43,19 @@
     text-align:center;
 }
 
-.oefenmodus { 
+.oefen_modus { 
     position: relative;
+}
+
+.remove_modus {
+    padding:5px;
+    color:black;
+}
+
+.remove_modus:hover {
+    padding:5px;
+    color:red;
+
 }
 
 .settings_card{
