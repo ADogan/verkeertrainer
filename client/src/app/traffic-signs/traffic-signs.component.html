@@ -1,5 +1,6 @@
-<div>
-  <h1>Verkeersborden, {{TrafficSigns.length}} op deze pagina.</h1> 
+<div class="page_header">
+  <h1 >Verkeersborden overzicht</h1> 
+<p class="sourceText">Bron: {{signsSourceUrl}}.</p>
 </div>
 <div class="trafficSignsContainer">
   <mat-card class="trafficSign" *ngFor="let trafficSign of TrafficSigns">
@@ -9,6 +10,3 @@
     <mat-card-content>{{trafficSign.description}}</mat-card-content>
   </mat-card>
 </div>
-<br />
-<p class="sourceText">Source: {{signsSourceUrl}}.</p>
-
