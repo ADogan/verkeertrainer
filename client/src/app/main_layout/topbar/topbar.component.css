@@ -6,6 +6,11 @@
     color:black;
 }
 
+.active_page_link {
+  background-color:lightgray;
+  color:black;
+}
+
 .logo {
     float:left;
     position: relative;

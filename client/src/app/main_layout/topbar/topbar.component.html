@@ -9,17 +9,17 @@
       </button>
     </span>
     <span class="topbarMenuItems">
-      <button mat-button [matMenuTriggerFor]="menuVerkeersBorden" id="dropdownMenuButton">
+      <button mat-button [matMenuTriggerFor]="menuVerkeersBorden" id="dropdownMenuButton" [ngClass]="{'active_page_link':currentPath.startsWith('/traffic_signs') }">
         Verkeersborden
       </button>
     
       <mat-menu #menuVerkeersBorden="matMenu">
-          <button mat-menu-item routerLink="/traffic_signs">Overzicht</button>
-          <button mat-menu-item routerLink="/traffic_signs/quiz/new">Start Quiz</button>
-          <button mat-menu-item routerLink="/traffic_signs/quiz/results">Resultaten</button>
+          <button mat-menu-item routerLink="/traffic_signs/overview" [ngClass]="{'active_page_link':currentPath === '/traffic_signs/overview' }">Overzicht</button>
+          <button mat-menu-item routerLink="/traffic_signs/quiz/new" [ngClass]="{'active_page_link':currentPath === '/traffic_signs/quiz/new' }">Start Quiz</button>
+          <button mat-menu-item routerLink="/traffic_signs/quiz/results" [ngClass]="{'active_page_link':currentPath === '/traffic_signs/quiz/results' }">Resultaten</button>
       </mat-menu>
     
-      <button mat-button routerLink="/about">
+      <button mat-button routerLink="/about" [ngClass]="{'active_page_link':currentPath === '/about' }">
           <span>Over</span>
       </button>
     </span>

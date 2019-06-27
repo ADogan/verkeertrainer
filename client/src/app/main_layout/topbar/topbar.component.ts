@@ -7,7 +7,7 @@ import { Event, NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./topbar.component.css']
 })
 export class TopbarComponent implements OnInit {
-  currentpath: any;
+  currentPath: any;
 
   constructor(private router: Router ) {
   }
@@ -15,7 +15,7 @@ export class TopbarComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe( ( event: Event) => {
       if (event instanceof NavigationEnd ) {
-        this.currentpath = event.url;
+        this.currentPath = event.url;
       }
     });
   }
