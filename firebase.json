@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "client/dist/verkeertrainer",
+    "public": "web/dist/verkeertrainer",
     "ignore": [
       "firebase.json",
       "**/.*",

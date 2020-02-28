@@ -13,18 +13,18 @@ build:
     - apt install -y nodejs
     - npm install -y npm@latest -g
     - npm install -g @angular/cli
-    - cd /builds/ADogan/verkeertrainer/client
+    - cd /builds/ADogan/verkeertrainer/web
     - rm package-lock.json
     - npm install
     - ng build --prod
-  cache: 
-    paths: 
-      - /builds/ADogan/verkeertrainer/client/node_modules/
+  cache:
+    paths:
+      - /builds/ADogan/verkeertrainer/web/node_modules/
   artifacts:
       when: on_success
       name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
       paths:
-        - /builds/ADogan/verkeertrainer/client/dist/
+        - /builds/ADogan/verkeertrainer/web/dist/
 
 test:
   stage: 'test'
