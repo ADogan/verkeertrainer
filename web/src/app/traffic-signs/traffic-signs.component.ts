@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TrafficSignsService } from '../services/traffic-signs.service';
 import { ITrafficSign } from '../models/traffic-sign.model';
 
 @Component({  templateUrl: './traffic-signs.component.html',
 styleUrls: ['./traffic-signs.component.css' ]})
-export class TrafficSignsComponent {
+export class TrafficSignsComponent implements OnInit {
     constructor(private trafficSignsService: TrafficSignsService) {}
     TrafficSigns: ITrafficSign[];
     trafficSignImageUrlBase: string;
     signsSourceUrl: string;
-    learn_model: boolean = false;
-    remove_model:boolean = false;
+    learn_model = false;
+    remove_model = false;
 
     ngOnInit() {
         this.initializeSigns();
@@ -25,9 +25,9 @@ export class TrafficSignsComponent {
     }
 
     signClicked(sign_description, sign) {
-        if(this.learn_model){
+        if (this.learn_model) {
             alert(sign_description);
-        } else if(this.remove_model) {
+        } else if (this.remove_model) {
             this.TrafficSigns.splice(this.TrafficSigns.indexOf(sign), 1);
         } else {
             // console.log("Just a click on:" + sign);
@@ -35,13 +35,13 @@ export class TrafficSignsComponent {
     }
 
     clicked_practice_mode() {
-        if(this.learn_model === false){
+        if (this.learn_model === false) {
             this.remove_model = false;
         }
     }
 
     clicked_remove_mode() {
-        if(this.remove_model === false){
+        if (this.remove_model === false) {
             this.learn_model = false;
         }
     }
