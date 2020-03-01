@@ -2,15 +2,17 @@ import { Injectable, OnInit } from '@angular/core';
 import { TrafficSignsService } from './traffic-signs.service';
 import { ITrafficSign } from '../models/traffic-sign.model';
 import { IQuiz } from '../models/quiz.model';
+import { ExamStatsService, ExamStatsActions } from './exam-stats/exam-stats.service';
+import { pipe, Observable } from 'rxjs';
 
 
-let QUIZZES: IQuiz[] = [];
+const QUIZZES: IQuiz[] = [];
 
 
 @Injectable()
 export class QuizService implements OnInit {
 
-    constructor(private trafficSignsService: TrafficSignsService) {}
+    constructor(private trafficSignsService: TrafficSignsService, private examStatsService: ExamStatsService) {}
         all_traffic_signs: ITrafficSign[] ;
 
     ngOnInit() {
@@ -31,8 +33,25 @@ export class QuizService implements OnInit {
             }
         };
         QUIZZES.push(newQuiz);
+        this.updateStatisticsApi(ExamStatsActions.STARTED);
         return newQuizId;
     }
+
+  updateStatisticsApi(statType: ExamStatsActions) {
+    let postresult: Observable<boolean>;
+    if (statType === ExamStatsActions.STARTED) {
+        postresult = this.examStatsService.postQuizStartedToApi();
+        postresult.subscribe( data => {if (!data) {
+          this.updateStatisticsApi(ExamStatsActions.STARTED);
+      } });
+    } else if (statType === ExamStatsActions.FINISHED) {
+      postresult = this.examStatsService.postQuizFinishedToApi();
+      postresult.subscribe( data => {if (!data) {
+        this.updateStatisticsApi(ExamStatsActions.FINISHED);
+      }});
+    }
+  }
+
 
     getNewQuizId(): number {
         const highestQuizId = this.getHighestQuizId();
@@ -54,7 +73,7 @@ export class QuizService implements OnInit {
     }
 
     updateQuizWithAnswer(quizId: number, signId: string, correct: boolean, dateTime: Date) {
-        let toBeUpdatesQuizElement = QUIZZES.find(quiz => quiz.id === quizId );
+        const toBeUpdatesQuizElement = QUIZZES.find(quiz => quiz.id === quizId );
         if (correct) {
             toBeUpdatesQuizElement.correct.signs.push(signId);
         } else {

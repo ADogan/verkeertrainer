@@ -23,4 +23,22 @@ export class ExamStatsService {
   getExamStats(): Observable<ExamStats> {
     return this.http.get<ExamStats>(this.apiUrl);
   }
+
+
+  postQuizStartedToApi(): Observable<boolean> {
+    const postBody = '';
+    return this.http.post<boolean>(this.apiUrl + '/exam/verkeertrainer/started',
+            postBody, this.httpOptions);
+  }
+
+  postQuizFinishedToApi(): Observable<boolean> {
+    const postBody = '';
+    return this.http.post<boolean>(this.apiUrl + '/exam/verkeertrainer/finished',
+            postBody, this.httpOptions);
+  }
 }
+
+export enum ExamStatsActions {
+  STARTED,
+  FINISHED
+ }
