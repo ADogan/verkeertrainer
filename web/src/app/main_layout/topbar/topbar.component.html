@@ -31,7 +31,7 @@
           matTooltipPosition='below'>
           Quiz begonnen: {{ numberOfStartedQuizzes }}
         </span>
-        <span *ngIf="numberOfFinishedQuizzes >= 0"
+        <span *ngIf="numberOfFinishedQuizzes"
           matTooltip="Alle verkeersborden quizzen die voltooid zijn."
           matTooltipPosition='below'>
           Quiz voltooid: {{ numberOfFinishedQuizzes }}
