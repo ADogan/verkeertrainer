@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material.angular
@@ -25,6 +25,7 @@ import { TrafficSignsComponent } from './traffic-signs/traffic-signs.component';
 import { TopbarComponent } from './main_layout/topbar/topbar.component';
 import { FooterComponent } from './main_layout/footer/footer.component';
 import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
+import { ExamStatsService } from './services/exam-stats/exam-stats.service';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MaterialModule,
     FormsModule,
@@ -47,7 +49,8 @@ import { QuizresultsComponent } from './quiz/quizresults/quizresults.component';
     BrowserAnimationsModule,
   ],
   providers: [TrafficSignsService,
-    QuizService],
+    QuizService,
+  ExamStatsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

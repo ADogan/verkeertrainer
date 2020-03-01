@@ -36,9 +36,48 @@
   .logoIcon {
     display: inline;
   }
-  
+
 }
 
 .signQuizButton {
   width:auto;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.examStats *{
+  font-size: 0.45em;
+  float:right;
+  text-align: right;
+  line-height: 1.2em;
+  color:grey;
+  cursor: pointer;
+  /* background-color: red; */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently */
+ }
+
+.examStats *:hover{
+  color:black;
+  /* background-color: red; */
+ }
+
+@media screen and (max-width: 790px) {
+  .logoText {
+      display:none;
+  }
+
+  .logoIcon {
+    display: inline;
+  }
+
+  .examStats {
+    font-size: 1.4em;
+  }
 }

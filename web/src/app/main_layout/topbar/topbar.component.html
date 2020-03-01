@@ -23,5 +23,19 @@
           <span>Over</span>
       </button>
     </span>
+
+    <span class="fill-remaining-space"></span>
+    <span class="examStats">
+        <span *ngIf="numberOfStartedQuizzes >= 0"
+          matTooltip="Alle verkeersborden quizzen die gestart zijn."
+          matTooltipPosition='below'>
+          Quiz begonnen: {{ numberOfStartedQuizzes }}
+        </span>
+        <span *ngIf="numberOfFinishedQuizzes >= 0"
+          matTooltip="Alle verkeersborden quizzen die voltooid zijn."
+          matTooltipPosition='below'>
+          Quiz voltooid: {{ numberOfFinishedQuizzes }}
+        </span>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>

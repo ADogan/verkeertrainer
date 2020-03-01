@@ -11,7 +11,7 @@ export class TrafficSignsComponent {
     signsSourceUrl: string;
     learn_model: boolean = false;
     remove_model:boolean = false;
-    
+
     ngOnInit() {
         this.initializeSigns();
     }
@@ -30,7 +30,7 @@ export class TrafficSignsComponent {
         } else if(this.remove_model) {
             this.TrafficSigns.splice(this.TrafficSigns.indexOf(sign), 1);
         } else {
-            console.log("Just a click on:" + sign);
+            // console.log("Just a click on:" + sign);
         }
     }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
+import { ExamStatsService } from 'src/app/services/exam-stats/exam-stats.service';
 
 @Component({
   selector: 'app-topbar',
@@ -8,8 +9,10 @@ import { Event, NavigationEnd, Router } from '@angular/router';
 })
 export class TopbarComponent implements OnInit {
   currentPath: any;
+  numberOfStartedQuizzes: number;
+  numberOfFinishedQuizzes: number;
 
-  constructor(private router: Router ) {
+  constructor(private router: Router, private examStatsService:  ExamStatsService ) {
   }
 
   ngOnInit() {
@@ -17,6 +20,15 @@ export class TopbarComponent implements OnInit {
       if (event instanceof NavigationEnd ) {
         this.currentPath = event.url;
       }
+    });
+
+    this.startListeningToExamStats();
+  }
+
+  startListeningToExamStats() {
+    this.examStatsService.getExamStats().forEach(( d) => {
+      this.numberOfStartedQuizzes = d.examStarted;
+      this.numberOfFinishedQuizzes = d.examFinished;
     });
   }
 }

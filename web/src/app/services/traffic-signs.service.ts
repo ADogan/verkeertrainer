@@ -21,7 +21,7 @@ export class TrafficSignsService {
 
     getRandomTrafficSign() {
         const random_number = Math.floor(Math.random() * (TRAFFIC_SIGNS.length));
-        console.log(random_number);
+        // console.log(random_number);
         return TRAFFIC_SIGNS[random_number];
     }
 

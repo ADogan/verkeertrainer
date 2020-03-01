@@ -58,7 +58,7 @@ export class QuizComponent implements OnInit {
       this.updateQuiz(correct);
       this.feedbackTime(quizOption);
     } else {
-      console.log(this.feedbackPeriod);
+      // console.log(this.feedbackPeriod);
     }
   }
   updateQuiz(correct: boolean) {
@@ -82,7 +82,7 @@ export class QuizComponent implements OnInit {
   }
 
   feedbackTime(quizOption: IQuizOption) {
-    console.log('start feedback');
+    // console.log('start feedback');
     this.showFeedback(quizOption);
     this.setTimeoutTimer();
   }
@@ -101,7 +101,7 @@ export class QuizComponent implements OnInit {
       if (this.feedbackPeriod) {
         this.newQuestion();
       } else {
-        console.log('timer is over but feedbackperiod is false, so the user must have pressed continue.');
+        // console.log('timer is over but feedbackperiod is false, so the user must have pressed continue.');
       }
     }, this.feedbackWaitTimeInMs);
   }
@@ -177,7 +177,7 @@ export class QuizComponent implements OnInit {
     do {
       currentSign = this.trafficSignsService.getRandomTrafficSign();
       signAlreadyPresent = this.signIsAlreadyPresentAsAnOption(currentSign);
-      console.log('sign not present???');
+      // console.log('sign not present???');
     } while (signAlreadyPresent);
 
     const answerPosition = this.getUniqueRandomNumberBelowMaxAmountOfChoices();
@@ -222,7 +222,7 @@ export class QuizComponent implements OnInit {
     let i = 0;
 
     while (!randomNumberAvailable) {
-      console.log('attempt to find a random available number ' + ++i);
+      // console.log('attempt to find a random available number ' + ++i);
       randomNumber = this.getRandomNumberBelowMaxAmountOfChoices();
       randomNumberAvailable = this.isRandomNumberAvailableInQuizOptions(randomNumber);
     }
